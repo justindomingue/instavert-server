@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def accueil
-    @title = "Accueil"
+    @title = "L'Envert"
   end
 
   def astuces

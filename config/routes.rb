@@ -1,11 +1,11 @@
 Mobile::Application.routes.draw do
   
   # Statics pages
-  get "pages/accueil"
-  get "pages/astuces"
-  get "pages/instructions"
-  get "pages/contacts"
+  match '/astuces',      :to => 'pages#astuces'
+  match '/instructions', :to => 'pages#instructions'
+  match '/contacts',     :to => 'pages#contacts'
 
+  root :to => "pages#accueil"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

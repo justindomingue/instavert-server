@@ -11,7 +11,7 @@ describe PagesController do
     
     it "should have the right title" do
       get 'accueil'
-      response.should have_selector("title", :content => "Accueil")
+      response.should have_selector("title", :content => "L'Envert")
     end
   end
   

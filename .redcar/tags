@@ -1,4 +1,4 @@
-1330805893
+1330815068
 Application	/home/justin/Programmation/rails_projects/mobile/config/application.rb	  class Application 
 ApplicationController	/home/justin/Programmation/rails_projects/mobile/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/home/justin/Programmation/rails_projects/mobile/app/helpers/application_helper.rb	module ApplicationHelper
@@ -17,6 +17,8 @@ accueil	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_c
 astuces	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def astuces
 contacts	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def contacts
 instructions	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def instructions
+mobile_device?	/home/justin/Programmation/rails_projects/mobile/app/controllers/application_controller.rb	  def mobile_device?
+set_mobile_format	/home/justin/Programmation/rails_projects/mobile/app/controllers/application_controller.rb	  def set_mobile_format
 should be successful	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should be successful" do
 should be successful	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should be successful" do
 should be successful	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should be successful" do

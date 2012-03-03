@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @title %></title>
+  <%= stylesheet_link_tag 'application', 'custom' %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+  <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+</head>
+
+<body>
+  <div data-role="page" data-theme="c" data-content-theme="c" data-add-back-btn="true" data-back-btn-text="Retour">
+    <div data-role="header">
+      <h1><%= @title %></h1>
+    </div>
+    <div data-role="content">
+      <%= yield %>
+    </div>
+
+  </div>
+</body>
+</html>
