@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.2.0'
-gem 'sqlite3'
+#gem 'sqlite3'
 gem 'jquery-rails'
 
 gem 'mime-types', '1.17.2'
