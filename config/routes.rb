@@ -1,4 +1,11 @@
 Mobile::Application.routes.draw do
+  
+  # Statics pages
+  get "pages/accueil"
+  get "pages/astuces"
+  get "pages/instructions"
+  get "pages/contacts"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
