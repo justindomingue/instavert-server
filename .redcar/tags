@@ -1,0 +1,8 @@
+1330803419
+Application	/home/justin/Programmation/rails_projects/mobile/config/application.rb	  class Application 
+ApplicationController	/home/justin/Programmation/rails_projects/mobile/app/controllers/application_controller.rb	class ApplicationController 
+ApplicationHelper	/home/justin/Programmation/rails_projects/mobile/app/helpers/application_helper.rb	module ApplicationHelper
+BrowsingTest	/home/justin/Programmation/rails_projects/mobile/test/performance/browsing_test.rb	class BrowsingTest 
+Mobile	/home/justin/Programmation/rails_projects/mobile/config/application.rb	module Mobile
+TestCase	/home/justin/Programmation/rails_projects/mobile/test/test_helper.rb	class ActiveSupport::TestCase
+test_homepage	/home/justin/Programmation/rails_projects/mobile/test/performance/browsing_test.rb	  def test_homepage
