@@ -5,6 +5,7 @@ Mobile::Application.routes.draw do
   match '/instructions', :to => 'pages#instructions'
   match '/contacts',     :to => 'pages#contacts'
   match '/apropos',      :to => 'pages#apropos'
+  
   root :to => "pages#accueil"
   # The priority is based upon order of creation:
   # first created -> highest priority.
