@@ -14,5 +14,8 @@ class PagesController < ApplicationController
   def contacts
     @title = "Contacts"
   end
-
+  
+  def apropos
+    @title = "A Propos"
+  end
 end

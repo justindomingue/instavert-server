@@ -50,6 +50,18 @@ describe PagesController do
       response.should have_selector("title", :content => "Contacts")
     end
   end
+  
+  describe "GET 'apropos'" do
+    it "should be successful" do
+      get 'apropos'
+      response.should be_success
+    end
+    
+    it "should have the right title" do
+      get 'apropos'
+      response.should have_selector("title", :content => "A Propos")
+    end
+  end
 end
   
   

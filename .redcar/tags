@@ -1,9 +1,10 @@
-1330819080
+1330820841
 Application	/home/justin/Programmation/rails_projects/mobile/config/application.rb	  class Application 
 ApplicationController	/home/justin/Programmation/rails_projects/mobile/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/home/justin/Programmation/rails_projects/mobile/app/helpers/application_helper.rb	module ApplicationHelper
 BrowsingTest	/home/justin/Programmation/rails_projects/mobile/test/performance/browsing_test.rb	class BrowsingTest 
 GET 'accueil'	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	describe "GET 'accueil'" do
+GET 'apropos'	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	describe "GET 'apropos'" do
 GET 'astuces'	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	describe "GET 'astuces'" do
 GET 'contacts'	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	describe "GET 'contacts'" do
 GET 'instructions'	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	describe "GET 'instructions'" do
@@ -14,6 +15,7 @@ PagesHelper	/home/justin/Programmation/rails_projects/mobile/app/helpers/pages_h
 PagesHelperTest	/home/justin/Programmation/rails_projects/mobile/test/unit/helpers/pages_helper_test.rb	class PagesHelperTest 
 TestCase	/home/justin/Programmation/rails_projects/mobile/test/test_helper.rb	class ActiveSupport::TestCase
 accueil	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def accueil
+apropos	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def apropos
 astuces	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def astuces
 contacts	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def contacts
 instructions	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def instructions
@@ -23,6 +25,8 @@ should be successful	/home/justin/Programmation/rails_projects/mobile/spec/contr
 should be successful	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should be successful" do
 should be successful	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should be successful" do
 should be successful	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should be successful" do
+should be successful	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should be successful" do
+should have the right title	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should have the right title" do
 should have the right title	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should have the right title" do
 should have the right title	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should have the right title" do
 should have the right title	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should have the right title" do
