@@ -24,8 +24,9 @@ test:
 
 production:
   adapter: postgresql
-  database: db/production.postgresql
-  username: mobile
-  password: timmpw123
+  database: hhipslavsx
+  username: hhipslavsx
+  password: AYCFcVKM4J8Epohj2mLi
+  host: ec2-23-21-226-247.compute-1.amazonaws.com
   pool: 5
   timeout: 5000
