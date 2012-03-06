@@ -1,34 +1,73 @@
-1330821456
+1331050438
 Application	/home/justin/Programmation/rails_projects/mobile/config/application.rb	  class Application 
 ApplicationController	/home/justin/Programmation/rails_projects/mobile/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/home/justin/Programmation/rails_projects/mobile/app/helpers/application_helper.rb	module ApplicationHelper
 BrowsingTest	/home/justin/Programmation/rails_projects/mobile/test/performance/browsing_test.rb	class BrowsingTest 
+CreatePlaces	/home/justin/Programmation/rails_projects/mobile/db/migrate/20120306001124_create_places.rb	class CreatePlaces 
+CreateProducts	/home/justin/Programmation/rails_projects/mobile/db/migrate/20120306155140_create_products.rb	class CreateProducts 
 GET 'accueil'	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	describe "GET 'accueil'" do
 GET 'apropos'	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	describe "GET 'apropos'" do
 GET 'astuces'	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	describe "GET 'astuces'" do
 GET 'contacts'	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	describe "GET 'contacts'" do
+GET 'index'	/home/justin/Programmation/rails_projects/mobile/spec/controllers/places_controller_spec.rb	describe "GET 'index'" do
 GET 'instructions'	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	describe "GET 'instructions'" do
+LayoutLinks	/home/justin/Programmation/rails_projects/mobile/spec/requests/layout_links_spec.rb	describe "LayoutLinks" do
 Mobile	/home/justin/Programmation/rails_projects/mobile/config/application.rb	module Mobile
 PagesController	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	class PagesController 
 PagesControllerTest	/home/justin/Programmation/rails_projects/mobile/test/functional/pages_controller_test.rb	class PagesControllerTest 
 PagesHelper	/home/justin/Programmation/rails_projects/mobile/app/helpers/pages_helper.rb	module PagesHelper
 PagesHelperTest	/home/justin/Programmation/rails_projects/mobile/test/unit/helpers/pages_helper_test.rb	class PagesHelperTest 
+Place	/home/justin/Programmation/rails_projects/mobile/app/models/place.rb	class Place 
+PlacesController	/home/justin/Programmation/rails_projects/mobile/app/controllers/places_controller.rb	class PlacesController 
+PlacesHelper	/home/justin/Programmation/rails_projects/mobile/app/helpers/places_helper.rb	module PlacesHelper
+Product	/home/justin/Programmation/rails_projects/mobile/app/models/product.rb	class Product 
+ProductsController	/home/justin/Programmation/rails_projects/mobile/app/controllers/products_controller.rb	class ProductsController 
+ProductsHelper	/home/justin/Programmation/rails_projects/mobile/app/helpers/products_helper.rb	module ProductsHelper
 TestCase	/home/justin/Programmation/rails_projects/mobile/test/test_helper.rb	class ActiveSupport::TestCase
 accueil	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def accueil
 apropos	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def apropos
 astuces	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def astuces
+authenticate	/home/justin/Programmation/rails_projects/mobile/app/controllers/places_controller.rb	  def authenticate
+change	/home/justin/Programmation/rails_projects/mobile/db/migrate/20120306001124_create_places.rb	  def change
+change	/home/justin/Programmation/rails_projects/mobile/db/migrate/20120306155140_create_products.rb	  def change
+concats two strings with spaces	/home/justin/Programmation/rails_projects/mobile/spec/helpers/products_helper_spec.rb	it "concats two strings with spaces" do
 contacts	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def contacts
+create	/home/justin/Programmation/rails_projects/mobile/app/controllers/places_controller.rb	  def create
+create	/home/justin/Programmation/rails_projects/mobile/app/controllers/products_controller.rb	  def create
+destroy	/home/justin/Programmation/rails_projects/mobile/app/controllers/places_controller.rb	  def destroy
+destroy	/home/justin/Programmation/rails_projects/mobile/app/controllers/products_controller.rb	  def destroy
+for mobile	/home/justin/Programmation/rails_projects/mobile/spec/controllers/places_controller_spec.rb	describe "for mobile" do
+for mobile device	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	describe "for mobile device" do
+for mobile devices	/home/justin/Programmation/rails_projects/mobile/spec/requests/layout_links_spec.rb	describe "for mobile devices" do
+index	/home/justin/Programmation/rails_projects/mobile/app/controllers/places_controller.rb	  def index
+index	/home/justin/Programmation/rails_projects/mobile/app/controllers/products_controller.rb	  def index
 instructions	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def instructions
 mobile_device?	/home/justin/Programmation/rails_projects/mobile/app/controllers/application_controller.rb	  def mobile_device?
+new	/home/justin/Programmation/rails_projects/mobile/app/controllers/places_controller.rb	  def new
+new	/home/justin/Programmation/rails_projects/mobile/app/controllers/products_controller.rb	  def new
 set_mobile_format	/home/justin/Programmation/rails_projects/mobile/app/controllers/application_controller.rb	  def set_mobile_format
+should allow no content and no tags places	/home/justin/Programmation/rails_projects/mobile/spec/models/place_spec.rb	it "should allow no content and no tags places" do
 should be successful	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should be successful" do
 should be successful	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should be successful" do
 should be successful	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should be successful" do
 should be successful	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should be successful" do
 should be successful	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should be successful" do
+should be successful	/home/justin/Programmation/rails_projects/mobile/spec/controllers/places_controller_spec.rb	it "should be successful" do
+should create a new instance given valid attributes	/home/justin/Programmation/rails_projects/mobile/spec/models/place_spec.rb	it "should create a new instance given valid attributes" do
+should have a A Propos page at '/apropos'	/home/justin/Programmation/rails_projects/mobile/spec/requests/layout_links_spec.rb	describe "should have a A Propos page at '/apropos'" do
+should have a Accueil page at '/'	/home/justin/Programmation/rails_projects/mobile/spec/requests/layout_links_spec.rb	describe "should have a Accueil page at '/'" do
+should have a Astuces page at '/astuces'	/home/justin/Programmation/rails_projects/mobile/spec/requests/layout_links_spec.rb	describe "should have a Astuces page at '/astuces'" do
+should have a Contacts page at '/contacts'	/home/justin/Programmation/rails_projects/mobile/spec/requests/layout_links_spec.rb	describe "should have a Contacts page at '/contacts'" do
+should have a Instructions page at '/instructions'	/home/justin/Programmation/rails_projects/mobile/spec/requests/layout_links_spec.rb	describe "should have a Instructions page at '/instructions'" do
+should have a Places page at '/lieu'	/home/justin/Programmation/rails_projects/mobile/spec/requests/layout_links_spec.rb	describe "should have a Places page at '/lieu'" do
 should have the right title	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should have the right title" do
 should have the right title	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should have the right title" do
 should have the right title	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should have the right title" do
 should have the right title	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should have the right title" do
 should have the right title	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should have the right title" do
+should render the mobile view	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should render the mobile view" do
+should require a name	/home/justin/Programmation/rails_projects/mobile/spec/models/place_spec.rb	it "should require a name" do
+show	/home/justin/Programmation/rails_projects/mobile/app/controllers/places_controller.rb	  def show
+show	/home/justin/Programmation/rails_projects/mobile/app/controllers/products_controller.rb	  def show
+string concat	/home/justin/Programmation/rails_projects/mobile/spec/helpers/products_helper_spec.rb	describe "string concat" do
 test_homepage	/home/justin/Programmation/rails_projects/mobile/test/performance/browsing_test.rb	  def test_homepage

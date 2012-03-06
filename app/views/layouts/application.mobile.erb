@@ -2,24 +2,23 @@
 <html>
 <head>
   <title><%= @title %></title>
-  <%= stylesheet_link_tag 'application' %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
-  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
-  <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-  <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+  <%= render :partial => "layouts/metatags", :formats => [:html] %> 
+  <%= render 'layouts/jquerymobile'%>
 </head>
-
 <body>
   <div data-role="page" data-theme="c" data-content-theme="c" data-add-back-btn="true" data-back-btn-text="Retour">
+    <% unless flash.empty? %>
+      <script type="text/javascript">
+        alert("<%= flash[:success] %>")
+      </script>
+    <% end %>
     <div data-role="header">
       <h1><%= @title %></h1>
+      <% link_to 'Accueil', root_path, 'data-icon' => 'home', 'data-iconpos'=>"text"%>
     </div>
     <div data-role="content">
       <%= yield %>
     </div>
-
   </div>
 </body>
 </html>

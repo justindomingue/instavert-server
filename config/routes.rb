@@ -1,12 +1,18 @@
 Mobile::Application.routes.draw do
+  resources :places,   :path => "lieux"
+  resources :products, :path => "matieres"
   
+  # Root
+  root :to => "pages#accueil"
+
   # Statics pages
   match '/astuces',      :to => 'pages#astuces'
   match '/instructions', :to => 'pages#instructions'
   match '/contacts',     :to => 'pages#contacts'
   match '/apropos',      :to => 'pages#apropos'
   
-  root :to => "pages#accueil"
+  # Models
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

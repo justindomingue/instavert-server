@@ -1,0 +1,7 @@
+<ul data-role="listview" data-filter="true">
+  <% unless @places.empty? %>
+    <%= render :partial => 'place', :collection => @places %>
+  <% else %>
+    <li>La base de données est vide</li>
+  <% end %>
+</ul>

@@ -13,6 +13,13 @@ describe PagesController do
       get 'accueil'
       response.should have_selector("title", :content => "L'Envert")
     end
+    
+    describe "for mobile device" do
+      it "should render the mobile view" do
+        get 'accueil', :format => :mobile
+        response.should have_selector("div", "data-role" => "page")
+      end
+    end
   end
   
   describe "GET 'astuces'" do

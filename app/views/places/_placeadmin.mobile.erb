@@ -1,0 +1,7 @@
+<li>
+  <%= link_to place.name.capitalize, place %>
+  <%= link_to "supprimer", place, :method => :delete,
+                                  :confirm => "Vraiment?",
+                                  'data-icon' => 'delete',
+                                  'data-theme'=>'c'%>
+</li>

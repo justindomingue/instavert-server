@@ -1,13 +1,13 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.2.0'
-#gem 'sqlite3'
+gem 'sqlite3'
 gem 'jquery-rails'
 
 gem 'mime-types', '1.17.2'
 
 group :production do
-  gem "pg"
+  gem "sqlite3"
 end
 
 # Gems used only for assets and not required
@@ -18,6 +18,7 @@ group :assets do
   gem 'uglifier', '1.2.3'
   gem 'rspec-rails'
   gem 'webrat'
+  gem 'annotate', :git => 'git://github.com/jeremyolliver/annotate_models.git', :branch => 'rake_compatibility'
 end
 
 group :test do
@@ -25,4 +26,5 @@ group :test do
   gem 'turn', :require => false
   gem 'rspec'
   gem 'webrat'
+  gem 'sqlite3'
 end

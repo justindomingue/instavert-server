@@ -1,0 +1,17 @@
+<% if @title == 'Admin' %>
+  <ul data-role="listview" data-filter="true">
+  <li><%= link_to "Ajouter", new_place_path  %></li>
+  <% unless @places.empty? %>
+    <%= render :partial => 'placeadmin.mobile', :collection => @places, :as => :place %>
+  <% else %>
+    <li>La base de données est vide</li>
+  <% end %>
+  <li>
+</ul>
+<% else %>
+<ul data-role="listview">
+  <li>Carton</li>
+  <li>Courrier</li>
+  <li>Journal</li>
+</ul>
+<% end %>
