@@ -13,7 +13,8 @@
 
 ActiveRecord::Schema.define(:version => 20120306155140) do
 
-  create_table "places", :force => true do |t|
+  create_table "places", :id => false, :force => true do |t|
+    t.integer  "id",         :null => false
     t.string   "name"
     t.string   "content"
     t.string   "tags"

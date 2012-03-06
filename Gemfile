@@ -18,7 +18,7 @@ group :assets do
   gem 'rspec-rails'
   gem 'webrat'
   gem 'annotate', :git => 'git://github.com/jeremyolliver/annotate_models.git', :branch => 'rake_compatibility'
-  gem 'sqlite3'
+  gem 'pg'
 end
 
 group :test do
@@ -26,5 +26,5 @@ group :test do
   gem 'turn', :require => false
   gem 'rspec'
   gem 'webrat'
-  gem 'sqlite3'
+  gem 'pg'
 end
