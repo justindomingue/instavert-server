@@ -1,9 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.2.0'
-gem 'sqlite3'
 gem 'jquery-rails'
-
 gem 'mime-types', '1.17.2'
 
 group :production do
@@ -19,6 +17,7 @@ group :assets do
   gem 'rspec-rails'
   gem 'webrat'
   gem 'annotate', :git => 'git://github.com/jeremyolliver/annotate_models.git', :branch => 'rake_compatibility'
+  gem 'sqlite3'
 end
 
 group :test do
