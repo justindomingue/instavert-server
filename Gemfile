@@ -7,7 +7,7 @@ gem 'jquery-rails'
 gem 'mime-types', '1.17.2'
 
 group :production do
-  gem "sqlite3"
+  gem "pg"
 end
 
 # Gems used only for assets and not required
