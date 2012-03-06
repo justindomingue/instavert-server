@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.2.0'
 gem 'jquery-rails'
 gem 'mime-types', '1.17.2'
+gem 'pg'
 
 group :production do
   gem "pg"
