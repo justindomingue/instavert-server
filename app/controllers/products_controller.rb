@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   def index
     @title = 'Matieres'
-    @products = Product.all
+    @products = Product.order(:name)
   end
   
   def show
@@ -17,7 +17,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(params[:product])
     if @product.save
-      redirect_to products_place, :flash => { :success => "Matiere cree" }
+      redirect_to root_path
     else
       @title = "Ajouter"
       render 'new'
@@ -27,7 +27,7 @@ class ProductsController < ApplicationController
   def destroy
     Product.find(params[:id]).destroy
     flash[:success] = "Matiere detruite."
-    redirect_to products_path
+    redirect_to root_path
   end
     
 end

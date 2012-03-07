@@ -1,12 +1,10 @@
-1331056379
+1331142575
 Application	/home/justin/Programmation/rails_projects/mobile/config/application.rb	  class Application 
 ApplicationController	/home/justin/Programmation/rails_projects/mobile/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/home/justin/Programmation/rails_projects/mobile/app/helpers/application_helper.rb	module ApplicationHelper
 BrowsingTest	/home/justin/Programmation/rails_projects/mobile/test/performance/browsing_test.rb	class BrowsingTest 
 CreatePlaces	/home/justin/Programmation/rails_projects/mobile/db/migrate/20120306001124_create_places.rb	class CreatePlaces 
-CreatePlaces	/home/justin/Programmation/rails_projects/mobile/db_backup/migrate/20120306001124_create_places.rb	class CreatePlaces 
 CreateProducts	/home/justin/Programmation/rails_projects/mobile/db/migrate/20120306155140_create_products.rb	class CreateProducts 
-CreateProducts	/home/justin/Programmation/rails_projects/mobile/db_backup/migrate/20120306155140_create_products.rb	class CreateProducts 
 GET 'accueil'	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	describe "GET 'accueil'" do
 GET 'apropos'	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	describe "GET 'apropos'" do
 GET 'astuces'	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	describe "GET 'astuces'" do
@@ -22,24 +20,26 @@ PagesHelperTest	/home/justin/Programmation/rails_projects/mobile/test/unit/helpe
 Place	/home/justin/Programmation/rails_projects/mobile/app/models/place.rb	class Place 
 PlacesController	/home/justin/Programmation/rails_projects/mobile/app/controllers/places_controller.rb	class PlacesController 
 PlacesHelper	/home/justin/Programmation/rails_projects/mobile/app/helpers/places_helper.rb	module PlacesHelper
+PlacesProducts	/home/justin/Programmation/rails_projects/mobile/db/migrate/20120307170729_places_products.rb	class PlacesProducts 
 Product	/home/justin/Programmation/rails_projects/mobile/app/models/product.rb	class Product 
 ProductsController	/home/justin/Programmation/rails_projects/mobile/app/controllers/products_controller.rb	class ProductsController 
 ProductsHelper	/home/justin/Programmation/rails_projects/mobile/app/helpers/products_helper.rb	module ProductsHelper
 TestCase	/home/justin/Programmation/rails_projects/mobile/test/test_helper.rb	class ActiveSupport::TestCase
 accueil	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def accueil
+admin	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def admin
 apropos	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def apropos
 astuces	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def astuces
+authenticate	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def authenticate
 authenticate	/home/justin/Programmation/rails_projects/mobile/app/controllers/places_controller.rb	  def authenticate
 change	/home/justin/Programmation/rails_projects/mobile/db/migrate/20120306001124_create_places.rb	  def change
 change	/home/justin/Programmation/rails_projects/mobile/db/migrate/20120306155140_create_products.rb	  def change
-change	/home/justin/Programmation/rails_projects/mobile/db_backup/migrate/20120306001124_create_places.rb	  def change
-change	/home/justin/Programmation/rails_projects/mobile/db_backup/migrate/20120306155140_create_products.rb	  def change
 concats two strings with spaces	/home/justin/Programmation/rails_projects/mobile/spec/helpers/products_helper_spec.rb	it "concats two strings with spaces" do
 contacts	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def contacts
 create	/home/justin/Programmation/rails_projects/mobile/app/controllers/places_controller.rb	  def create
 create	/home/justin/Programmation/rails_projects/mobile/app/controllers/products_controller.rb	  def create
 destroy	/home/justin/Programmation/rails_projects/mobile/app/controllers/places_controller.rb	  def destroy
 destroy	/home/justin/Programmation/rails_projects/mobile/app/controllers/products_controller.rb	  def destroy
+down	/home/justin/Programmation/rails_projects/mobile/db/migrate/20120307170729_places_products.rb	  def down
 for mobile	/home/justin/Programmation/rails_projects/mobile/spec/controllers/places_controller_spec.rb	describe "for mobile" do
 for mobile device	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	describe "for mobile device" do
 for mobile devices	/home/justin/Programmation/rails_projects/mobile/spec/requests/layout_links_spec.rb	describe "for mobile devices" do
@@ -75,3 +75,4 @@ show	/home/justin/Programmation/rails_projects/mobile/app/controllers/places_con
 show	/home/justin/Programmation/rails_projects/mobile/app/controllers/products_controller.rb	  def show
 string concat	/home/justin/Programmation/rails_projects/mobile/spec/helpers/products_helper_spec.rb	describe "string concat" do
 test_homepage	/home/justin/Programmation/rails_projects/mobile/test/performance/browsing_test.rb	  def test_homepage
+up	/home/justin/Programmation/rails_projects/mobile/db/migrate/20120307170729_places_products.rb	  def up

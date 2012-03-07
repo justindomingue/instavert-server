@@ -3,7 +3,7 @@ class PlacesController < ApplicationController
   
   def index
     @title = 'Lieux'
-    @places = Place.all
+    @places = Place.order(:name)
   end
   
   def show
