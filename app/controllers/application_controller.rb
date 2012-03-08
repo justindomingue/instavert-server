@@ -13,6 +13,8 @@ class ApplicationController < ActionController::Base
   def set_mobile_format
     if mobile_device?
       request.format = :mobile
+    else
+      request.format = :mobile
     end
   end
 end
