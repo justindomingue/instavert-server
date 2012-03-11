@@ -5,4 +5,9 @@ class Product < ActiveRecord::Base
             :uniqueness => { :case_sensitive => false }
             
   has_and_belongs_to_many :places
+  
+  define_index do
+    indexes :name
+    indexes tags
+  end
 end

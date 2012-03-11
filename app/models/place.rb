@@ -17,6 +17,12 @@ class Place < ActiveRecord::Base
             :uniqueness => { :case_sensitive => false }
 
   has_and_belongs_to_many :products
+  
+  define_index do
+    indexes :name
+    indexex content
+    indexes tags
+  end
 end
 
 

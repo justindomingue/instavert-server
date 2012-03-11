@@ -21,18 +21,14 @@ class PagesController < ApplicationController
     @title = "A Propos"
   end
   
-  def admin
-    authenticate
-    @title = "Admin"
-    @products = Product.all
-    @places   = Place.all
-  end
-  
-  protected
-    
-  def authenticate
-    authenticate_or_request_with_http_basic do |username, password|
-    username == "foo" && password = "bar"
+  def recherche
+    if params[:search] == nil
+      redirect_to root_path
+    else
+     @title = "Recherche"
+      @recherche = ThinkingSphinx.search params[:search], :class => [Product, Place],
+                                                        :match_mode => :any,
+                                                        :order => 'class_crc ASC'
     end
   end
 end

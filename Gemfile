@@ -5,6 +5,7 @@ gem 'jquery-rails'
 gem 'mime-types', '1.17.2'
 gem 'pg'
 gem 'thin'
+gem 'thinking-sphinx', '2.0.10'
 
 group :production do
   gem "pg"

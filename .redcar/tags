@@ -1,4 +1,4 @@
-1331181202
+1331489396
 Application	/home/justin/Programmation/rails_projects/mobile/config/application.rb	  class Application 
 ApplicationController	/home/justin/Programmation/rails_projects/mobile/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/home/justin/Programmation/rails_projects/mobile/app/helpers/application_helper.rb	module ApplicationHelper
@@ -26,10 +26,8 @@ ProductsController	/home/justin/Programmation/rails_projects/mobile/app/controll
 ProductsHelper	/home/justin/Programmation/rails_projects/mobile/app/helpers/products_helper.rb	module ProductsHelper
 TestCase	/home/justin/Programmation/rails_projects/mobile/test/test_helper.rb	class ActiveSupport::TestCase
 accueil	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def accueil
-admin	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def admin
 apropos	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def apropos
 astuces	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def astuces
-authenticate	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def authenticate
 authenticate	/home/justin/Programmation/rails_projects/mobile/app/controllers/places_controller.rb	  def authenticate
 change	/home/justin/Programmation/rails_projects/mobile/db/migrate/20120306001124_create_places.rb	  def change
 change	/home/justin/Programmation/rails_projects/mobile/db/migrate/20120306155140_create_products.rb	  def change
@@ -49,6 +47,7 @@ instructions	/home/justin/Programmation/rails_projects/mobile/app/controllers/pa
 mobile_device?	/home/justin/Programmation/rails_projects/mobile/app/controllers/application_controller.rb	  def mobile_device?
 new	/home/justin/Programmation/rails_projects/mobile/app/controllers/places_controller.rb	  def new
 new	/home/justin/Programmation/rails_projects/mobile/app/controllers/products_controller.rb	  def new
+recherche	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def recherche
 set_mobile_format	/home/justin/Programmation/rails_projects/mobile/app/controllers/application_controller.rb	  def set_mobile_format
 should allow no content and no tags places	/home/justin/Programmation/rails_projects/mobile/spec/models/place_spec.rb	it "should allow no content and no tags places" do
 should be successful	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should be successful" do

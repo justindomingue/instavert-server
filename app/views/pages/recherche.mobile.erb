@@ -1,0 +1,18 @@
+<% m_count = l_count = 0 %>
+<ul data-role="listview">
+<% if @recherche.empty? %>
+  <li>Aucun résultat trouvé</li
+<% else %>
+<% @recherche.each do |r| %>
+    <% if (r.respond_to?('content')) && (m_count < 1) %>
+      <li data-role="listdivider">Lieux de recyclage
+      <% m_count = 1 %>
+   <% elsif l_count < 1 %>
+      <li data-role="listdivider">Matières
+      <% l_count = 1 %>
+    <% end %>
+  </li>
+  <li><%= link_to r.name, r %></li>
+<% end %>
+<% end %>
+</ul>

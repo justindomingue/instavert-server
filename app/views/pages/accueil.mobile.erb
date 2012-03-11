@@ -1,5 +1,5 @@
 <ul data-role="listview">
-  <li><input type="search" value="Recherche" />
+  <li><%= render 'shared/searchform' %></li>
   <li><%= link_to 'Matières', products_path %><span class="ui-li-count"><%= @products_count %></li>
   <li><%= link_to 'Lieux de recyclage', places_path %><span class="ui-li-count"><%= @places_count %></span></li>
   <li><%= link_to 'Astuces', astuces_path %><span class="ui-li-count">4</span></li>
