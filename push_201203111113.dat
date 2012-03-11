@@ -1,0 +1,1 @@
+{"klass":"Taps::Push","database_url":"postgres://mobile:timmpw123@localhost/pg_development","remote_url":"http://heroku:osui59a24am79x@taps19.heroku.com","session_uri":"/sessions/4776587825","stream_state":{},"completed_tables":[],"table_filter":null,"local_tables_info":{"schema_migrations":3,"places":14,"products":130,"places_products":179}}

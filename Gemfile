@@ -3,9 +3,16 @@ source 'http://rubygems.org'
 gem 'rails', '3.2.0'
 gem 'jquery-rails'
 gem 'mime-types', '1.17.2'
+
+# Database
 gem 'pg'
+
+# Server
 gem 'thin'
+
+# Search
 gem 'thinking-sphinx', '2.0.10'
+gem 'flying-sphinx',   '0.6.1'
 
 group :production do
   gem "pg"
