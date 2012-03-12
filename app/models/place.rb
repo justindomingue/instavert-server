@@ -12,15 +12,14 @@
 
 class Place < ActiveRecord::Base
   attr_accessible :name, :content, :tags
+  include PgSearch
   
   validates :name, :presence => true,
             :uniqueness => { :case_sensitive => false }
 
   has_and_belongs_to_many :products
   
-  include PgSearch
-  pg_search_scope :search_places_by_name, :against => [:name]
-  pg_search_scope :search_places_by_tags, :against => [:tags]
+  pg_search_scope :search_places, :against => [:name, :tags, :content]
 end
 
 

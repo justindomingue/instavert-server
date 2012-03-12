@@ -27,10 +27,8 @@ class PagesController < ApplicationController
     else
       @title = "Recherche"
       search = params[:search]
-      @products_by_name = search_products_by_name(search)
-      @products_by_tags = search_products_by_tags(search)
-      @places_by_name   = search_places_by_name(search)
-      @placess_by_tags  = search_places_by_tags(search)
+      @products = Product.search_products(search)
+      @places   = Place.search_places(search)
     end
   end
 end
