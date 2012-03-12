@@ -18,11 +18,9 @@ class Place < ActiveRecord::Base
 
   has_and_belongs_to_many :products
   
-  define_index do
-    indexes :name
-    indexex content
-    indexes tags
-  end
+  include PgSearch
+  pg_search_scope :search_places_by_name, :against => [:name]
+  pg_search_scope :search_places_by_tags, :against => [:tags]
 end
 
 

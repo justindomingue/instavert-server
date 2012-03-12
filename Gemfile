@@ -11,8 +11,7 @@ gem 'pg'
 gem 'thin'
 
 # Search
-gem 'thinking-sphinx', '2.0.10'
-gem 'flying-sphinx',   '0.6.1'
+gem 'pg_search'
 
 group :production do
   gem "pg"

@@ -25,10 +25,12 @@ class PagesController < ApplicationController
     if params[:search] == nil
       redirect_to root_path
     else
-     @title = "Recherche"
-      @recherche = ThinkingSphinx.search params[:search], :class => [Product, Place],
-                                                        :match_mode => :any,
-                                                        :order => 'class_crc ASC'
+      @title = "Recherche"
+      search = params[:search]
+      @products_by_name = search_products_by_name(search)
+      @products_by_tags = search_products_by_tags(search)
+      @places_by_name   = search_places_by_name(search)
+      @placess_by_tags  = search_places_by_tags(search)
     end
   end
 end

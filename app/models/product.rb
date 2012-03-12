@@ -6,8 +6,7 @@ class Product < ActiveRecord::Base
             
   has_and_belongs_to_many :places
   
-  define_index do
-    indexes :name
-    indexes tags
-  end
+  include PgSearch
+  pg_search_scope :search_products_by_name, :against => [:name]
+  pg_search_scope :search_products_by_tags, :against => [:tags]
 end
