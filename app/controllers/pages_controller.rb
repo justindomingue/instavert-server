@@ -22,13 +22,18 @@ class PagesController < ApplicationController
   end
   
   def recherche
-    if params[:search] == nil
+    if params[:recherche] == nil
       redirect_to root_path
     else
       @title = "Recherche"
-      search = params[:search]
+      search = params[:recherche]
       @products = Product.search_products(search)
       @places   = Place.search_places(search)
+      if @products.empty?
+        Search.create!(@products)
+      elsif @places.empty?
+        Search.create!(@places)
+      end
     end
   end
 end

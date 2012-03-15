@@ -1,10 +1,11 @@
-1331515396
+1331600444
 Application	/home/justin/Programmation/rails_projects/mobile/config/application.rb	  class Application 
 ApplicationController	/home/justin/Programmation/rails_projects/mobile/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/home/justin/Programmation/rails_projects/mobile/app/helpers/application_helper.rb	module ApplicationHelper
 BrowsingTest	/home/justin/Programmation/rails_projects/mobile/test/performance/browsing_test.rb	class BrowsingTest 
 CreatePlaces	/home/justin/Programmation/rails_projects/mobile/db/migrate/20120306001124_create_places.rb	class CreatePlaces 
 CreateProducts	/home/justin/Programmation/rails_projects/mobile/db/migrate/20120306155140_create_products.rb	class CreateProducts 
+CreateSearches	/home/justin/Programmation/rails_projects/mobile/db/migrate/20120313004723_create_searches.rb	class CreateSearches 
 GET 'accueil'	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	describe "GET 'accueil'" do
 GET 'apropos'	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	describe "GET 'apropos'" do
 GET 'astuces'	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	describe "GET 'astuces'" do
@@ -24,6 +25,7 @@ PlacesProducts	/home/justin/Programmation/rails_projects/mobile/db/migrate/20120
 Product	/home/justin/Programmation/rails_projects/mobile/app/models/product.rb	class Product 
 ProductsController	/home/justin/Programmation/rails_projects/mobile/app/controllers/products_controller.rb	class ProductsController 
 ProductsHelper	/home/justin/Programmation/rails_projects/mobile/app/helpers/products_helper.rb	module ProductsHelper
+Searches	/home/justin/Programmation/rails_projects/mobile/app/models/searches.rb	class Searches 
 TestCase	/home/justin/Programmation/rails_projects/mobile/test/test_helper.rb	class ActiveSupport::TestCase
 accueil	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def accueil
 apropos	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def apropos
@@ -31,7 +33,9 @@ astuces	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_c
 authenticate	/home/justin/Programmation/rails_projects/mobile/app/controllers/places_controller.rb	  def authenticate
 change	/home/justin/Programmation/rails_projects/mobile/db/migrate/20120306001124_create_places.rb	  def change
 change	/home/justin/Programmation/rails_projects/mobile/db/migrate/20120306155140_create_products.rb	  def change
+change	/home/justin/Programmation/rails_projects/mobile/db/migrate/20120313004723_create_searches.rb	  def change
 concats two strings with spaces	/home/justin/Programmation/rails_projects/mobile/spec/helpers/products_helper_spec.rb	it "concats two strings with spaces" do
+concats two strings with spaces	/home/justin/Programmation/rails_projects/mobile/spec/helpers/searches_helper_spec.rb	it "concats two strings with spaces" do
 contacts	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def contacts
 create	/home/justin/Programmation/rails_projects/mobile/app/controllers/places_controller.rb	  def create
 create	/home/justin/Programmation/rails_projects/mobile/app/controllers/products_controller.rb	  def create
@@ -73,5 +77,6 @@ should require a name	/home/justin/Programmation/rails_projects/mobile/spec/mode
 show	/home/justin/Programmation/rails_projects/mobile/app/controllers/places_controller.rb	  def show
 show	/home/justin/Programmation/rails_projects/mobile/app/controllers/products_controller.rb	  def show
 string concat	/home/justin/Programmation/rails_projects/mobile/spec/helpers/products_helper_spec.rb	describe "string concat" do
+string concat	/home/justin/Programmation/rails_projects/mobile/spec/helpers/searches_helper_spec.rb	describe "string concat" do
 test_homepage	/home/justin/Programmation/rails_projects/mobile/test/performance/browsing_test.rb	  def test_homepage
 up	/home/justin/Programmation/rails_projects/mobile/db/migrate/20120307170729_places_products.rb	  def up

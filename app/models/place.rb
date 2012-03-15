@@ -19,7 +19,14 @@ class Place < ActiveRecord::Base
 
   has_and_belongs_to_many :products
   
-  pg_search_scope :search_places, :against => [:name, :tags, :content]
+  pg_search_scope :search_places, 
+                  :against => [:name, :tags, :content],
+                  :using => {
+                    :tsearch => {:prefix     => true,
+                                 :dictionary => "french",
+                                 :any_word => true
+                    }
+                  }
 end
 
 
