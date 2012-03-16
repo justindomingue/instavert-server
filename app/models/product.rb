@@ -10,7 +10,7 @@ class Product < ActiveRecord::Base
   pg_search_scope :search_products, 
                   :against => [:name, :tags],
                   :using => {
-                    :tsearch => {:prefix     => true,
+                    :tsearch => { # :prefix     => true, postgresql >= 8.4 
                                  :dictionary => "french",
                                  :any_word => true
                     }

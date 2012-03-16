@@ -22,7 +22,7 @@ class Place < ActiveRecord::Base
   pg_search_scope :search_places, 
                   :against => [:name, :tags, :content],
                   :using => {
-                    :tsearch => {:prefix     => true,
+                    :tsearch => {#:prefix     => true, postgresql >= 8.4 
                                  :dictionary => "french",
                                  :any_word => true
                     }
