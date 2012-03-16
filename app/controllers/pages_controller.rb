@@ -26,14 +26,11 @@ class PagesController < ApplicationController
       redirect_to root_path
     else
       @title = "Recherche"
-      search = params[:recherche]
-      @products = Product.search_products(search)
-      @places   = Place.search_places(search)
-      if @products.empty?
-        Search.create!(@products)
-      elsif @places.empty?
-        Search.create!(@places)
-      end
+      @products = Product.search_products(params[:recherche])
+      @places   = Place.search_places(params[:recherche])
+      search = Search.new(:name => params[:recherche], 
+                          :presence => (@products.empty? && @places.empty?)? false : true )
+      search.save
     end
   end
 end
