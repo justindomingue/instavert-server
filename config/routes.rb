@@ -11,6 +11,7 @@ Mobile::Application.routes.draw do
   match '/contacts',     :to => 'pages#contacts'
   match '/apropos',      :to => 'pages#apropos'
   match '/recherche',    :to => 'pages#recherche'
+  match '/favoris',      :to => 'pages#favoris'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -46,6 +46,5 @@ module Mobile
     config.assets.version = '1.0'
     
     config.assets.initialize_on_precompile = false
-    config.assets.precompile += ['icon/matieres.png']
   end
 end

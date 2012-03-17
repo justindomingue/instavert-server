@@ -2,22 +2,22 @@
 <html>
 <head>
   <title><%= @title %></title>
-  <%= render :partial => "layouts/metatags", :formats => [:html] %> 
   <%= render 'layouts/jquerymobile'%>
+  <%= render :partial => "layouts/metatags", :formats => [:html] %> 
 </head>
 <body>
-  <div data-role="page" data-theme="d" data-content-theme="d" data-add-back-btn="true" data-back-btn-text="Retour">
+  <div data-role="page" data-theme="c" data-content-theme="c" data-add-back-btn="true" data-back-btn-text="Retour">
     <% unless flash.empty? %>
       <script type="text/javascript">
         alert("<%= flash[:success] %>")
       </script>
     <% end %>
     <div id="top_bar"></div>
-    <div data-role="header">
+    <div data-role="header" >
       <h1><%= @title %></h1>
       <% link_to 'Accueil', root_path, 'data-icon' => 'home', 'data-iconpos'=>"text"%>
     </div>
-    <div data-role="content">
+    <div data-role="content" id="content">
       <%= yield %>
     </div>
   </div>

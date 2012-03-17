@@ -1,0 +1,7 @@
+views:
+  pagination:
+    first: "P"
+    previous: "&laquo; Pécédent"
+    next: "Suivant &raquo;"
+    last: "D"
+    truncate: "..."

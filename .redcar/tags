@@ -1,4 +1,4 @@
-1332004373
+1332024475
 Application	/home/justin/Programmation/rails_projects/mobile/config/application.rb	  class Application 
 ApplicationController	/home/justin/Programmation/rails_projects/mobile/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/home/justin/Programmation/rails_projects/mobile/app/helpers/application_helper.rb	module ApplicationHelper
@@ -42,6 +42,7 @@ create	/home/justin/Programmation/rails_projects/mobile/app/controllers/products
 destroy	/home/justin/Programmation/rails_projects/mobile/app/controllers/places_controller.rb	  def destroy
 destroy	/home/justin/Programmation/rails_projects/mobile/app/controllers/products_controller.rb	  def destroy
 down	/home/justin/Programmation/rails_projects/mobile/db/migrate/20120307170729_places_products.rb	  def down
+favoris	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def favoris
 for mobile	/home/justin/Programmation/rails_projects/mobile/spec/controllers/places_controller_spec.rb	describe "for mobile" do
 for mobile device	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	describe "for mobile device" do
 for mobile devices	/home/justin/Programmation/rails_projects/mobile/spec/requests/layout_links_spec.rb	describe "for mobile devices" do

@@ -21,6 +21,11 @@ class PagesController < ApplicationController
     @title = "A Propos"
   end
   
+  def favoris
+    @title = "Favoris"
+    @favoris = Search.all
+  end
+  
   def recherche
     if params[:recherche] == nil
       redirect_to root_path
