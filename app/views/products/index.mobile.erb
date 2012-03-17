@@ -1,5 +1,6 @@
 <ul data-role="listview" data-filter="true">
   <% unless @products.empty? %>
+    <%= will_paginate @products, :class=>"apple_pagination" %>
     <%= render :partial => 'product', :collection => @products %>
   <% else %>
     <li>La base de données est vide</li>

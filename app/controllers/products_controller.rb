@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   def index
     @title = 'Matieres'
-    @products = Product.order(:name)
+    @products = Product.order(:name).paginate(:page => params[:page])
   end
   
   def show
