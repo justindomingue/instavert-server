@@ -19,11 +19,14 @@ class PagesController < ApplicationController
   
   def apropos
     @title = "A Propos"
-  end
+  endheroku ru
   
   def favoris
     @title = "Favoris"
-    @favoris = Search.all
+    favoris = Search.all
+    freq = favoris.inject(Hash.new(0)) { |h,v| h[v.name] += 1; h }
+    sort_list = favoris.sort_by { |v| freq[v] }.uniq
+    @favoris = sort_list[-5..-1]
   end
   
   def recherche
@@ -38,4 +41,5 @@ class PagesController < ApplicationController
       search.save
     end
   end
+end
 end

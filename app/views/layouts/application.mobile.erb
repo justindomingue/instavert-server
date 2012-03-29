@@ -12,7 +12,6 @@
         alert("<%= flash[:success] %>")
       </script>
     <% end %>
-    <div id="top_bar"></div>
     <div data-role="header" >
       <h1><%= @title %></h1>
       <% link_to 'Accueil', root_path, 'data-icon' => 'home', 'data-iconpos'=>"text"%>
@@ -20,6 +19,7 @@
     <div data-role="content" id="content">
       <%= yield %>
     </div>
+    <div data-role="footer" id="footer"><div class="footer_text">&copy; 2012 Groupe l'Envert</div></div>
   </div>
 </body>
 </html>
