@@ -1,3 +1,8 @@
+
+
+<% if params[:recherche] == nil %>
+  <%= render 'shared/searchform' %>
+<% else %>
 <ul data-role="listview">
   <% if @products.empty? && @places.empty? %>
   <li>Aucun résultat trouvé</li>
@@ -16,3 +21,4 @@
   <% end %>
   <% end %>
 </ul>
+<% end %>

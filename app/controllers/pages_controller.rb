@@ -19,7 +19,7 @@ class PagesController < ApplicationController
   
   def apropos
     @title = "A Propos"
-  endheroku ru
+  end
   
   def favoris
     @title = "Favoris"
@@ -30,10 +30,8 @@ class PagesController < ApplicationController
   end
   
   def recherche
-    if params[:recherche] == nil
-      redirect_to root_path
-    else
-      @title = "Recherche"
+    @title = "Recherche"
+    unless params[:recherche] == nil
       @products = Product.search_products(params[:recherche])
       @places   = Place.search_places(params[:recherche])
       search = Search.new(:name => params[:recherche], 
@@ -41,5 +39,4 @@ class PagesController < ApplicationController
       search.save
     end
   end
-end
 end

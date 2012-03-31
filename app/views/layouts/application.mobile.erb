@@ -6,20 +6,14 @@
   <%= render :partial => "layouts/metatags", :formats => [:html] %> 
 </head>
 <body>
-  <div data-role="page" data-theme="c" data-content-theme="c" data-add-back-btn="true" data-back-btn-text="Retour">
-    <% unless flash.empty? %>
-      <script type="text/javascript">
-        alert("<%= flash[:success] %>")
-      </script>
-    <% end %>
+  <div data-role="page" data-theme="c" data-content-theme="c"  data-add-back-btn="true" data-back-btn-text="Retour">
     <div data-role="header" >
       <h1><%= @title %></h1>
-      <% link_to 'Accueil', root_path, 'data-icon' => 'home', 'data-iconpos'=>"text"%>
     </div>
     <div data-role="content" id="content">
       <%= yield %>
     </div>
-    <div data-role="footer" id="footer"><div class="footer_text">&copy; 2012 Groupe l'Envert</div></div>
+<!--    <div data-role="footer" id="footer"><div class="footer_text">&copy; 2012 Groupe l'Envert</div></div> -->
   </div>
 </body>
 </html>
