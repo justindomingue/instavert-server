@@ -39,4 +39,8 @@ class PagesController < ApplicationController
       search.save
     end
   end
+  
+  def statistiques
+    @title = 'Statistiques'
+  end
 end

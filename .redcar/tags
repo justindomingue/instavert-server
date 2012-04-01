@@ -1,4 +1,4 @@
-1333295188
+1333296059
 Application	/home/justin/Programmation/rails_projects/mobile/config/application.rb	  class Application 
 ApplicationController	/home/justin/Programmation/rails_projects/mobile/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/home/justin/Programmation/rails_projects/mobile/app/helpers/application_helper.rb	module ApplicationHelper
@@ -83,6 +83,7 @@ should render the mobile view	/home/justin/Programmation/rails_projects/mobile/s
 should require a name	/home/justin/Programmation/rails_projects/mobile/spec/models/place_spec.rb	it "should require a name" do
 show	/home/justin/Programmation/rails_projects/mobile/app/controllers/places_controller.rb	  def show
 show	/home/justin/Programmation/rails_projects/mobile/app/controllers/products_controller.rb	  def show
+statistiques	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def statistiques
 string concat	/home/justin/Programmation/rails_projects/mobile/spec/helpers/products_helper_spec.rb	describe "string concat" do
 string concat	/home/justin/Programmation/rails_projects/mobile/spec/helpers/searches_helper_spec.rb	describe "string concat" do
 test_homepage	/home/justin/Programmation/rails_projects/mobile/test/performance/browsing_test.rb	  def test_homepage
