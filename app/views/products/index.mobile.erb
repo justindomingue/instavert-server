@@ -1,7 +1,7 @@
 <ul data-role="listview" data-filter="true">
   <% unless @products.empty? %>
-    <%= will_paginate @products, :class=>"apple_pagination", :previous_label => 'Précédent', :next_label => 'Suivant'%> 
-    <%= render :partial => 'product', :collection => @products %>
+  <div class="centering paginator"><%= alphabar @paginator %></div>
+  <%= render :partial => 'product', :collection => @products %>
   <% else %>
     <li>La base de données est vide</li>
   <% end %>

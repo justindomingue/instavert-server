@@ -144,7 +144,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  alphabar
+  alphabar (~> 0.1.0)
   annotate!
   coffee-rails (~> 3.2.1)
   jquery-rails
