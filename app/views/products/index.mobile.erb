@@ -1,6 +1,6 @@
 <ul data-role="listview" data-filter="true">
   <% unless @products.empty? %>
-  <div class="centering paginator"><%= alphabar @paginator %></div>
+  <div class="paginator"><%= alphabar @paginator %></div>
   <%= render :partial => 'product', :collection => @products %>
   <% else %>
     <li>La base de données est vide</li>
