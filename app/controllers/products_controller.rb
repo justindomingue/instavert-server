@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   def index
     @title = 'Matieres'
-    @products = Product.order(:name).paginate(:page => params[:page])
+    @products, @paginator = Product.alpha_scope :name, params[:ltr]
   end
   
   def show
