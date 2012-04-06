@@ -1,4 +1,4 @@
-<ul data-role="listview" data-filter="true">
+<ul data-role="listview" data-filter="true" class="ui-listview">
   <% unless @places.empty? %>
     <%= render :partial => 'place', :collection => @places %>
   <% else %>
