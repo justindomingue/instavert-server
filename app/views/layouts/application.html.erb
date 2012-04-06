@@ -3,18 +3,19 @@
 <head>
   <title><%= @title %></title>
   <%= render 'layouts/jquerymobile'%>
-  <%= render :partial => "layouts/metatags", :formats => [:html] %>
+  <%= render 'layouts/metatags'%>
   <%= render 'shared/googleanalytics'%>
 </head>
 <body>
-  <div data-role="page" data-theme="c" data-content-theme="c"  data-add-back-btn="true" data-back-btn-text="Retour">
-    <div data-role="header" >
-      <h1><%= @title %></h1>
+  <div data-role="page" data-theme="c" data-content-theme="c">
+    <div data-role="header">
+      <h1 class="ui-title" role="heading" aria-level="1"><%= @title %></h1>
+      <% unless current_page?('/') %><a href="/" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-left ui-btn ui-btn-up-f ui-shadow ui-btn-corner-all ui-btn-icon-notext" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="f" title="Home"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Home</span><span class="ui-icon ui-icon-home ui-icon-shadow"/></span></a><% end %>
+      <a href="/recherche" data-icon="search" data-iconpos="notext" data-rel="dialog" data-transition="fade" class="ui-btn-right ui-btn ui-btn-up-f ui-shadow ui-btn-corner-all ui-btn-icon-notext" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="f" title="Search"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Search</span><span class="ui-icon ui-icon-search ui-icon-shadow"/></a>
     </div>
     <div data-role="content" id="content">
       <%= yield %>
     </div>
-<!--    <div data-role="footer" id="footer"><div class="footer_text">&copy; 2012 Groupe l'Envert</div></div> -->
   </div>
 </body>
 </html>
