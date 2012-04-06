@@ -1,0 +1,10 @@
+<%= render 'shared/searchform' %>
+<br />
+<ul data-role="listview">
+  <% unless @products.empty? %>
+  <div class="paginator"><%= alphabar @paginator %></div>
+  <%= render :partial => 'product', :collection => @products %>
+  <% else %>
+    <li>La base de données est vide</li>
+  <% end %>
+</ul>
