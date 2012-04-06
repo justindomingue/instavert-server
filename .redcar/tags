@@ -1,4 +1,4 @@
-1333745797
+1333746220
 Application	/home/justin/Programmation/rails_projects/mobile/config/application.rb	  class Application 
 ApplicationController	/home/justin/Programmation/rails_projects/mobile/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/home/justin/Programmation/rails_projects/mobile/app/helpers/application_helper.rb	module ApplicationHelper
@@ -55,11 +55,9 @@ h	/home/justin/Programmation/rails_projects/mobile/public/assets/application.js	
 index	/home/justin/Programmation/rails_projects/mobile/app/controllers/places_controller.rb	  def index
 index	/home/justin/Programmation/rails_projects/mobile/app/controllers/products_controller.rb	  def index
 instructions	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def instructions
-mobile_device?	/home/justin/Programmation/rails_projects/mobile/app/controllers/application_controller.rb	  def mobile_device?
 new	/home/justin/Programmation/rails_projects/mobile/app/controllers/places_controller.rb	  def new
 new	/home/justin/Programmation/rails_projects/mobile/app/controllers/products_controller.rb	  def new
 recherche	/home/justin/Programmation/rails_projects/mobile/app/controllers/pages_controller.rb	  def recherche
-set_mobile_format	/home/justin/Programmation/rails_projects/mobile/app/controllers/application_controller.rb	  def set_mobile_format
 should allow no content and no tags places	/home/justin/Programmation/rails_projects/mobile/spec/models/place_spec.rb	it "should allow no content and no tags places" do
 should be successful	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should be successful" do
 should be successful	/home/justin/Programmation/rails_projects/mobile/spec/controllers/pages_controller_spec.rb	it "should be successful" do
