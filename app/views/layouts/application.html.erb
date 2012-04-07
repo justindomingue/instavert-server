@@ -8,10 +8,10 @@
 </head>
 <body>
   <div data-role="page" data-theme="c" data-content-theme="c">
-    <div data-role="header">
+    <div data-role="header" class="ui-bar-g">
       <h1 class="ui-title" role="heading" aria-level="1"><%= @title %></h1>
-      <% unless current_page?('/') %><a href="/" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-left ui-btn ui-btn-up-f ui-shadow ui-btn-corner-all ui-btn-icon-notext" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="f" title="Home"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Home</span><span class="ui-icon ui-icon-home ui-icon-shadow"/></span></a><% end %>
-      <a href="/recherche" data-icon="search" data-iconpos="notext" data-rel="dialog" data-transition="fade" class="ui-btn-right ui-btn ui-btn-up-f ui-shadow ui-btn-corner-all ui-btn-icon-notext" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="f" title="Search"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Search</span><span class="ui-icon ui-icon-search ui-icon-shadow"/></a>
+      <% unless current_page?('/') %><a href="/" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-left ui-btn ui-btn-up-f ui-shadow ui-btn-corner-all ui-btn-icon-notext" title="Home"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Home</span><span class="ui-icon ui-icon-home ui-icon-shadow"/></span></a><% end %>
+      <a href="/recherche" data-icon="search" data-iconpos="notext" data-rel="page" data-transition="fade" class="ui-btn-right ui-btn ui-btn-up-f ui-shadow ui-btn-corner-all ui-btn-icon-notext"  title="Search"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Search</span><span class="ui-icon ui-icon-search ui-icon-shadow"/></a>
     </div>
     <div data-role="content" id="content">
       <%= yield %>

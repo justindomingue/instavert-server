@@ -43,4 +43,8 @@ class PagesController < ApplicationController
   def statistiques
     @title = 'Statistiques'
   end
+  
+  def commentaires
+    @title = 'Commentaires'
+  end
 end

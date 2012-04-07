@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   def index
     @title = 'Matieres'
-    @products, @paginator = Product.alpha_scope :name, params[:ltr]
+    @products, @paginator = Product.alpha_scope :name, params[:lettre]
   end
   
   def show
