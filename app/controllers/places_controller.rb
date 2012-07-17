@@ -1,5 +1,6 @@
 class PlacesController < ApplicationController
   before_filter :authenticate, :only => [:new, :edit, :destroy]
+  before_filter :increment_views, :only => [:show]
   
   def index
     @title = 'Lieux'
@@ -7,8 +8,8 @@ class PlacesController < ApplicationController
   end
   
   def show
-    @places = Place.find(params[:id])
-    @title = @places.name
+    @place = Place.find(params[:id])
+    @title = @place.name
   end
   
   def new
@@ -38,5 +39,10 @@ class PlacesController < ApplicationController
     authenticate_or_request_with_http_basic do |username, password|
     username == "foo" && password = "bar"
     end
+  end
+  
+  def increment_views
+    @place = Place.find(params[:id])
+    @place.increment!(:views)
   end
 end

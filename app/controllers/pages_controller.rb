@@ -23,10 +23,8 @@ class PagesController < ApplicationController
   
   def favoris
     @title = "Favoris"
-    favoris = Search.all
-    freq = favoris.inject(Hash.new(0)) { |h,v| h[v.name] += 1; h }
-    sort_list = favoris.sort_by { |v| freq[v] }.uniq
-    @favoris = sort_list[-5..-1]
+    @favorite_products = Product.order("views desc").first(5)
+    @favorite_places   = Place.order("views desc").first(5)
   end
   
   def recherche

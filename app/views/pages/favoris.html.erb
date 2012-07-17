@@ -1,3 +1,10 @@
 <ul data-role="listview">
-  <li>La base de données est vide</li>
+  <li data-role="list-divider">Top 5 Matière</li>
+    <% @favorite_products.each do |p| %>
+      <li><%= link_to p.name, p %></li>
+    <% end %>
+  <li data-role="list-divider">Top 5 Lieux de recyclage</li>
+    <% @favorite_places.each do |p| %>
+    <li><%= link_to p.name, p %></li>
+    <% end %> 
 </ul>

@@ -1,11 +1,11 @@
-<% unless @places.img.empty? %>
+<% unless @place.img.empty? %>
   <div class="centering">
-    <%= image_tag ("places/" + @places.img + ".jpg") %>
+    <%= image_tag ("places/" + @place.img + ".jpg") %>
   </div>
 <% end %>
 <br />
 <ul data-role="listview" class="ui-listview">
-  <% @places.products.each do |product| %>
+  <% @place.products.each do |product| %>
   <li><%= product.name %></li>
   <% end %>
 </ul>
