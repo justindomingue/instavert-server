@@ -5,6 +5,7 @@ gem 'jquery-rails'
 gem 'mime-types', '1.17.2'
 gem 'will_paginate', '~> 3.0'
 gem "alphabar", "~> 0.1.0"
+gem "haml"
 
 # Database
 gem 'pg'

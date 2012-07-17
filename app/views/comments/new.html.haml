@@ -1,0 +1,18 @@
+%h3 Exprimez-vous
+%p Questions sur l'aspect de l'application, la façon de l'utiliser, des produits et des places à ajouter?
+
+= form_for @comment do |f|
+  = f.label :name, "Nom"
+  = f.text_field :name
+  %br
+  
+  = f.label :email, "Adresse Courriel"
+  %small Elle sera seulement utilisée pour effectuer un suivi de votre commentaire.
+  = f.text_field :email
+  %br
+  
+  = f.label :comment, "Commentaire"
+  = f.text_area :comment
+  %br
+  
+  = f.submit "Envoyer"

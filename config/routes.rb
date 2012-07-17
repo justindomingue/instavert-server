@@ -1,10 +1,14 @@
 Mobile::Application.routes.draw do
-  resources :places,   :path => "lieux"
-  resources :products, :path => "matieres"
-  
+    
   # Root
   root :to => "pages#accueil"
+  
+  resources :places,   :path => "lieux"
+  resources :products, :path => "matieres"
 
+  match '/commentaires', :to => 'comments#new', :as => :comment
+  resources :comments, :only => [:new, :create]
+  
   # Statics pages
   match '/astuces',      :to => 'pages#astuces'
   match '/instructions', :to => 'pages#instructions'
