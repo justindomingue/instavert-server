@@ -19,6 +19,9 @@ Mobile::Application.configure do
 
   # Generate digests for assets URLs
   config.assets.digest = true
+  
+  config.assets.initialize_on_precompile = false
+
 
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
@@ -58,6 +61,6 @@ Mobile::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
   
-  config.assets.precompile += [ "*.css" ]
+  config.assets.precompile += [ "*.css", 'active_admin.css.scss', 'active_admin.js' ]
   config.action_mailer.default_url_options = {:host => 'adminhero.heroku.com'}
 end
