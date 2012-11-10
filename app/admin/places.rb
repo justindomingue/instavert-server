@@ -8,19 +8,20 @@ ActiveAdmin.register Place do
     end
     column "Description", :description
     column :tags
-    column "Image", :thumb
+    column "Vignette (URL)", :thumb
     column "Vues", :views
     default_actions
   end
   
   filter :name, :label => 'par nom'
-  filter :content, :label => 'par contenu'
+  filter :description, :label => 'par description'
   filter :tags, :label => 'par tags'
   
   form do |f|
     f.inputs "Détails" do
       f.input :name, :label => "Nom"
-      f.input :content, :label => "Contenu"
+      f.input :description, :label => "Descrition"
+      f.input :thumb, :label => "Vignette (URL)"
       f.input :tags
       f.buttons
     end
