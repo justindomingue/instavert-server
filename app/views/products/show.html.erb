@@ -2,9 +2,9 @@
   <h1 class="centering">Ce produit se recycle ici :</h1>
   <% @product.places.each do |place| %>
   <li class="ui-li ui-li-static ui-btn-ip-c ui-li-has-thumb">
-    <img class="ui-li-thumb" src="http://www.starkeyfrancepro.com/products/wi-series/resources/img/icon-driving.png" />
+    <img class="ui-li-thumb" src=<%= place.thumb %> />
     <h3 class="ui-li-heading"><%= place.name %></h3>
-    <p class="ui-li-desc">Se trouve un peu partout dans l'école. Identitifé d'une étiquette bleue.</p>
+    <p class="ui-li-desc"><%= place.description %>.</p>
   </li>
   <% end %>
 </ul>

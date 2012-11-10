@@ -6,9 +6,9 @@ ActiveAdmin.register Place do
   index do
     column "Nom", :name do |p| link_to p.name, admin_place_path(p)
     end
-    column "Description", :content
+    column "Description", :description
     column :tags
-    column "Image", :img
+    column "Image", :thumb
     column "Vues", :views
     default_actions
   end
