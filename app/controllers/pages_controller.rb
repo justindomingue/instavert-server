@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def accueil
-    @title = "L'Envert"
+    @title = "Instavert"
     @places_count   = Place.count
     @products_count = Product.count
   end
