@@ -1,5 +1,9 @@
 <ul data-role="listview">
+  <h1 class="centering">Ce produit se recycle ici :</h1>
   <% @product.places.each do |place| %>
-  <li><%= place.name %></li>
+  <li>
+    <%= place.name %>
+    <small>Asosposd</small>
+  </li>
   <% end %>
 </ul>

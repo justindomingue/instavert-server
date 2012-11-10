@@ -6,7 +6,8 @@
 development:
   adapter: postgresql
   database: pg_development
-  username: mobile
+  username: postgres
+  host: localhost 
   password: timmpw123
   pool: 5
   timeout: 5000

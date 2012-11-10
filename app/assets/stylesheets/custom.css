@@ -17,6 +17,10 @@
   font-size: 0.8em;
 }
 
+.icon img {
+  border-radius: 7px;
+}
+
 #footer {
   font-size: 0.8em;
   text-decoration: none;
