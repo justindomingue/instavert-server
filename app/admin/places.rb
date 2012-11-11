@@ -7,6 +7,7 @@ ActiveAdmin.register Place do
     column "Nom", :name do |p| link_to p.name, admin_place_path(p)
     end
     column "Description", :description
+    column :content
     column :tags
     column "Vignette (URL)", :thumb
     column "Vues", :views
