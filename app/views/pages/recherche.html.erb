@@ -6,7 +6,7 @@
   <li>Aucun résultat trouvé</li>
   <% else %>
   <% unless @products.empty? %>
-  <li data-role="list-divider">Matière</li>
+  <li data-role="list-divider">Matières</li>
     <% @products.each do |p| %>
       <li><%= link_to p.name, p %></li>
     <% end %>
