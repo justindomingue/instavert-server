@@ -11,7 +11,7 @@
 #
 
 class Place < ActiveRecord::Base
-  attr_accessible :name, :content, :tags
+  attr_accessible :name, :content, :tags, :thumb, :description
   include PgSearch
   
   validates :name, :presence => true,
