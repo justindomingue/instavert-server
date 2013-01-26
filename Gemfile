@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.0'
+gem 'rails', '3.2.11'
 gem 'jquery-rails'
 gem 'mime-types', '1.17.2'
 gem "alphabar", "~> 0.1.0"
