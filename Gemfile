@@ -6,6 +6,7 @@ gem 'mime-types', '1.17.2'
 gem "alphabar", "~> 0.1.0"
 gem "haml"
 gem "activeadmin"
+gem "rails-i18n"
 
 # Database
 gem 'pg'
