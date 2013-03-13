@@ -8,9 +8,7 @@ ActiveAdmin.register Product, :as => "Matiere" do
     column :tags
     column "Vues", :views
     column "Lieux" do |l|
-	    l.places.each do |p|
-		    p.name
-	    end
+		    l.name
     end
     default_actions
   end
