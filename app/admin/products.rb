@@ -7,6 +7,11 @@ ActiveAdmin.register Product, :as => "Matiere" do
     end
     column :tags
     column "Vues", :views
+    column "Lieux" do |l|
+	    l.places.each do |p|
+		    p.name
+	    end
+    end
     default_actions
   end
   
