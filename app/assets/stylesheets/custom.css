@@ -1,3 +1,12 @@
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */ 
+@font-face {
+  font-family:"Bira - PERSONAL USE ONLY";
+  src:url("/assets/Bira_PERSONAL_USE_ONLY.eot?") format("eot"),url("Bira_PERSONAL_USE_ONLY.woff") format("woff"),url("Bira_PERSONAL_USE_ONLY.ttf") format("truetype"),url("Bira_PERSONAL_USE_ONLY.svg#Bira-PERSONALUSEONLY") format("svg");
+  font-weight:normal;
+  font-style:normal;
+}
+.bira-title {font-family:"Bira - PERSONAL USE ONLY"}
+
 .centering {
   text-align: center;
 }
