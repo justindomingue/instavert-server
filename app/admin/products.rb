@@ -18,6 +18,7 @@ ActiveAdmin.register Product, :as => "Matiere" do
       f.input :name, :label => "Nom"
       f.input :tags
       f.buttons
+    end
   end
 
     end
