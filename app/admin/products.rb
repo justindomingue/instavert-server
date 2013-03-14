@@ -20,7 +20,4 @@ ActiveAdmin.register Product, :as => "Matiere" do
       f.buttons
     end
   end
-
-    end
-  end
 end
