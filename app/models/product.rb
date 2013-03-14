@@ -1,5 +1,6 @@
 class Product < ActiveRecord::Base
   attr_accessible :name, :tags
+  accepts_nested_attributes_for :products 
   include PgSearch
   
   validates :name, :presence => true,
