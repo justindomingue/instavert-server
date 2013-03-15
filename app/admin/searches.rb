@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 
-ActiveAdmin.register Search do
+ActiveAdmin.register Search, :as => "Recherche" do
   index do
     column "Nom", :name do |p| link_to p.name, admin_place_path(p)
     end
