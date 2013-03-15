@@ -9,7 +9,7 @@ ActiveAdmin::Dashboards.build do
         link_to product.name, admin_matiere_path(product)
       end
     end
-    strong { link_to "Voir toutes les Recherches", admin_searches_path }
+    strong { link_to "Voir toutes les Recherches", admin_recherches_path }
   end
 
   section "Produits récents", priority:2 do
