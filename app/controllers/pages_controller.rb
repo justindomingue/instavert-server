@@ -3,6 +3,10 @@ class PagesController < ApplicationController
     @title = "Instavert"
     @places_count   = Place.count
     @products_count = Product.count
+
+    if params[:ecole] # si le paramètre ecole est activé, définir une session
+      session[:school] = params[:ecole]
+    end
   end
 
   def astuces

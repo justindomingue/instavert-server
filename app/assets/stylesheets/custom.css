@@ -39,6 +39,7 @@
 #footer a {
   text-decoration: none;
   font-color: black;
+  padding-bottom : 5px;
 }
 
 .places_table {

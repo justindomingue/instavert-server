@@ -7,17 +7,37 @@
   <%= render 'shared/googleanalytics'%>
 </head>
 <body>
-  <div data-role="page" data-theme="c" data-content-theme="c">
+  <div data-role="page" data-theme="c" data-content-theme="c" id="PageID">	  
     <div data-role="header" class="ui-bar-g">
       <h1 class="ui-title bira-title" role="heading" aria-level="1"><%= @title %></h1>
-      <% unless current_page?('/') %><a href="/" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-left ui-btn ui-btn-up-f ui-shadow ui-btn-corner-all ui-btn-icon-notext" title="Accueil"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Accueil</span><span class="ui-icon ui-icon-home ui-icon-shadow"/></span></a><% end %>
+      <% unless current_page?('/') %>
+	  	<a href="/" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-left ui-btn ui-btn-up-f ui-shadow ui-btn-corner-all ui-btn-icon-notext" title="Accueil"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Accueil</span><span class="ui-icon ui-icon-home ui-icon-shadow"/></span></a>
+	  <% end %>
+	    
       <a href="/recherche" data-icon="search" data-iconpos="notext" data-rel="page" data-transition="fade" class="ui-btn-right ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-notext ui-btn-up-f" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="f" title="Recherche"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Recherche</span><span class="ui-icon ui-icon-search ui-icon-shadow"></span></span></a>
     </div>
     <div data-role="content" id="content">
+		
+	  <div data-role="popup" id="popup-choix" data-history="false" data-overlay-theme="a" data-transition="flow" data-position-to="window">
+	    <ul  data-autodivider="true" data-role="listview" data-inset="true" data-divider-theme="c">
+		  <li data-role="list-divider" class="centering">Choisir un établissement</li>
+		  <li><a href="/?ecole=1">Collège André-Grasset</a></li>
+		  <li><a href="/?ecole=2">Collège Jean-de-Brébeuf</a></li>
+		  <li><a href="/?ecole=3">Jean-de-la Menais</a></li>
+		  <li><a href="/?ecole=4">Jacques Prévost</a></li>
+		</ul>
+	</div>
       <%= yield %>
+	  
     </div>
     <br />
-    <div class="centering" id="footer" >&copy; 2012 Envert | Application développée par <a href="mailto:justin.domingue@hotmail.com">Justin Domingue</a></div>
+    <div class="centering" id="footer" >
+		<div class="div-popup"><a href="#popup-choix" data-rel="popup">Choisir un établissement</a></div>
+		<br/>
+		&copy; 2012 Envert | Application développée par <a href="mailto:justin.domingue@hotmail.com">Justin Domingue</a></div>
+		<br/>
   </div>
+  
+  
 </body>
 </html>
