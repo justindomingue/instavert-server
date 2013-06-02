@@ -4,9 +4,7 @@ class PagesController < ApplicationController
     @places_count   = Place.count
     @products_count = Product.count
 
-    if params[:ecole] # si le paramètre ecole est activé, définir une session
-      session[:school] = params[:ecole]
-    end
+    session[:school] = params[:e].to_i if params[:e]
   end
 
   def astuces
@@ -34,8 +32,8 @@ class PagesController < ApplicationController
   def recherche
     @title = "Recherche"
     unless params[:recherche] == nil
-      @products = Product.search_products(params[:recherche])
-      @places   = Place.search_places(params[:recherche])
+      @products = Product.search_products(params[:recherche]).where('school'=>session[:school])
+      @places   = Place.search_places(params[:recherche]).where('school'=>session[:school])
       search = Search.new(:name => params[:recherche], 
                           :presence => (@products.empty? && @places.empty?)? false : true )
       search.save

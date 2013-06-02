@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   
   def index
     @title = 'Matieres'
-    @products, @paginator = Product.alpha_scope :name, params[:ltr]
+    @products, @paginator = Product.where('school'=>session[:school]).alpha_scope(:name, params[:ltr])
   end
   
   def show

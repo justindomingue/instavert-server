@@ -4,7 +4,7 @@ class PlacesController < ApplicationController
   
   def index
     @title = 'Lieux'
-    @places = Place.order(:name)
+    @places = Place.where('school'=>session[:school]).order(:name)
   end
   
   def show

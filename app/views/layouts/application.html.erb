@@ -21,10 +21,10 @@
 	  <div data-role="popup" id="popup-choix" data-history="false" data-overlay-theme="a" data-transition="flow" data-position-to="window">
 	    <ul  data-autodivider="true" data-role="listview" data-inset="true" data-divider-theme="c">
 		  <li data-role="list-divider" class="centering">Choisir un établissement</li>
-		  <li><a href="/?ecole=1">Collège André-Grasset</a></li>
-		  <li><a href="/?ecole=2">Collège Jean-de-Brébeuf</a></li>
-		  <li><a href="/?ecole=3">Jean-de-la Menais</a></li>
-		  <li><a href="/?ecole=4">Jacques Prévost</a></li>
+		  <li><a href="/?e=1">Collège André-Grasset</a></li>
+		  <li><a href="/?e=2">Collège Jean-de-Brébeuf</a></li>
+		  <li><a href="/?e=3">Jean-de-la Menais</a></li>
+		  <li><a href="/?e=4">Jacques Prévost</a></li>
 		</ul>
 	</div>
       <%= yield %>
@@ -35,7 +35,8 @@
 		<br/>
 		&copy; 2012 Envert | Application développée par <a href="mailto:justin.domingue@hotmail.com">Justin Domingue</a></div>
 		<br/>
+	    inspect: <%= session.inspect %>
+		
   </div>
-    
 </body>
 </html>
