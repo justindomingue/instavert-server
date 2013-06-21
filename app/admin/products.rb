@@ -5,7 +5,9 @@ ActiveAdmin.register Product, :as => "Matiere" do
   index do
     column "Nom", :name, :sortable => :name do |p| link_to p.name, admin_matiere_path(p)
     end
+    column "Lieux" do |p| p.places.name end
     column :tags
+    column "Établissement", :school
     column "Vues", :views
     default_actions
   end
