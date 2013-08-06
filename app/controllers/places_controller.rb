@@ -1,10 +1,12 @@
 class PlacesController < ApplicationController
+  respond_to :html, :json
+  
   before_filter :authenticate, :only => [:new, :edit, :destroy]
   before_filter :increment_views, :only => [:show]
   
   def index
     @title = 'Lieux'
-    @places = Place.where('school'=>session[:school]).order(:name)
+    respond_with @places = Place.where('school'=>params[:school]).order(:name)
   end
   
   def show

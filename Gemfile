@@ -8,6 +8,8 @@ gem "haml"
 gem "activeadmin"
 gem "rails-i18n"
 
+gem "active_model_serializers"
+
 # Database
 gem 'pg'
 

@@ -1,9 +1,13 @@
 class ProductsController < ApplicationController
+  respond_to :html, :json
   before_filter :increment_views, :only => [:show]
   
   def index
     @title = 'Matieres'
-    @products, @paginator = Product.where('school'=>session[:school]).alpha_scope(:name, params[:ltr])
+    @products, @paginator = Product.where('school'=>params[:school]).alpha_scope(:name, params[:ltr])
+    
+    respond_with @products
+    end
   end
   
   def show
