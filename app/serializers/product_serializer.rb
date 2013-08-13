@@ -1,4 +1,7 @@
 class ProductSerializer < ActiveModel::Serializer
-  attributes :name, :tags, :views, :school
+  embed :ids
+  attributes :id, :name, :tags, :views
+  
+  has_many :places
   
 end

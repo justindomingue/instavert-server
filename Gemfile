@@ -15,6 +15,7 @@ gem 'pg'
 
 # Server
 gem 'thin'
+gem 'rack-cors', :require => 'rack/cors'
 
 # Search
 gem 'pg_search'

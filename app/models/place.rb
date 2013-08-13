@@ -1,10 +1,12 @@
 class Place < ActiveRecord::Base
+  default_scope :order => "name ASC"
+  
   attr_accessible :name, :content, :tags, :thumb, :description
   include PgSearch
   
-  validates :name, :presence => true,
-            :uniqueness => { :case_sensitive => false }
-
+  validates :name, :presence => true, :uniqueness => { :case_sensitive => false }
+  
+  belongs_to :school
   has_and_belongs_to_many :products
   
   pg_search_scope :search_places, 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130602203108) do
+ActiveRecord::Schema.define(:version => 20130806184557) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -65,7 +65,10 @@ ActiveRecord::Schema.define(:version => 20130602203108) do
     t.string   "description"
     t.string   "thumb"
     t.integer  "school"
+    t.integer  "school_id"
   end
+
+  add_index "places", ["school_id"], :name => "index_places_on_school_id"
 
   create_table "places_products", :id => false, :force => true do |t|
     t.integer "place_id",   :null => false
@@ -79,7 +82,10 @@ ActiveRecord::Schema.define(:version => 20130602203108) do
     t.datetime "updated_at", :null => false
     t.integer  "views"
     t.integer  "school"
+    t.integer  "school_id"
   end
+
+  add_index "products", ["school_id"], :name => "index_products_on_school_id"
 
   create_table "products_grasset", :force => true do |t|
     t.string   "name"
@@ -87,6 +93,12 @@ ActiveRecord::Schema.define(:version => 20130602203108) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "views"
+  end
+
+  create_table "schools", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "searches", :force => true do |t|

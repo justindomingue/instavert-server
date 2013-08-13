@@ -7,6 +7,8 @@ Mobile::Application.routes.draw do
   # Root
   root :to => "pages#accueil"
   
+  match '/api', to:'schools#index'
+  
   resources :places,   :path => "lieux"
   resources :products, :path => "matieres"
 

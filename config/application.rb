@@ -1,6 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+require 'rack/cors'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -49,5 +50,12 @@ module Mobile
     config.assets.initialize_on_precompile = false
 
     config.assets.paths << "#{Rails.root}/vendor/assets/fonts"
+    
+    config.middleware.use Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :put, :delete, :options]
+      end
+    end
   end
 end
