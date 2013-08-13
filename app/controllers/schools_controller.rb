@@ -7,7 +7,7 @@ class SchoolsController < ApplicationController
       if @school
         respond_with @school
       else
-        respond_with error:'No school responds to the given ID.', status:404
+        respond_with error:'No school responds to the given ID (' + params[:school] + ').', status:404
       end
     else
       respond_with error:'No school provided', status:400
