@@ -7,7 +7,6 @@ class ProductsController < ApplicationController
     @products, @paginator = Product.where('school'=>params[:school]).alpha_scope(:name, params[:ltr])
     
     respond_with @products
-    end
   end
   
   def show
