@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class SchoolsController < ApplicationController
   respond_to :json
   
@@ -7,7 +9,7 @@ class SchoolsController < ApplicationController
       if @school
         respond_with @school
       else
-        respond_with error:'No school responds to the given ID (' + params[:school] + ').', status:404
+        respond_with School.first, meta: { message:'Établissement introuvable. Base de données par défaut chargée.', error:'No school responds to the given ID (' + params[:school] + ').' }
       end
     else
       respond_with error:'No school provided', status:400
