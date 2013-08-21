@@ -3,6 +3,8 @@
   %head
     %title Instavert
     = stylesheet_link_tag "application", :media => "all"
+    = stylesheet_link_tag "custom", media:'all'
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lobster"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
@@ -10,7 +12,7 @@
       .masthead
         = render 'layouts/user_header'
         .icon= image_tag('icon.png')
-        %h3.muted= link_to "Savers Plus", root_path
-        %h5.muted Shopping list with a twist
+        %h3.muted= link_to "Instavert", root_path
+        %h5.muted Récupérer mieux, être plus heureux!
       %hr/
       = yield

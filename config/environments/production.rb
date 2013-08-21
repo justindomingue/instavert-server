@@ -62,6 +62,6 @@ Mobile::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
   
-  config.assets.precompile += [ "*.css", 'active_admin.css.scss', 'active_admin.js' ]
+  config.assets.precompile += [ "boostrap.css", 'active_admin.css.scss', 'active_admin.js' ]
   config.action_mailer.default_url_options = {:host => 'adminhero.heroku.com'}
 end
