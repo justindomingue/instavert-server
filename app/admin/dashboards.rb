@@ -11,10 +11,10 @@ ActiveAdmin.register_page "Dashboard" do
         panel "Recherches récentes" do
           table_for Search.order("created_at desc").limit(5) do |r|
             r.column "Nom", :name do |product|
-              link_to product.name, admin_matiere_path(product)
+              link_to product.name, superuser_matiere_path(product)
             end
           end
-          strong { link_to "Voir toutes les Recherches", admin_recherches_path }
+          strong { link_to "Voir toutes les Recherches", superuser_recherches_path }
         end
       end
       
@@ -22,10 +22,10 @@ ActiveAdmin.register_page "Dashboard" do
         panel "Produits récents" do
           table_for Product.order("created_at desc").limit(5) do |p|
             p.column "Nom", :name do |product|
-              link_to product.name, admin_matiere_path(product)
+              link_to product.name, superuser_matiere_path(product)
             end
           end
-          strong { link_to "Voir tous les Produits", admin_matieres_path }
+          strong { link_to "Voir tous les Produits", superuser_matieres_path }
         end
       end
       
@@ -33,10 +33,10 @@ ActiveAdmin.register_page "Dashboard" do
         panel "Places récentes" do
           table_for Place.order("created_at desc").limit(5) do
             column "Nom", :name do |place|
-              link_to place.name, admin_place_path(place)
+              link_to place.name, superuser_place_path(place)
             end
           end
-          strong { link_to "Voir toutes les Places", admin_places_path }
+          strong { link_to "Voir toutes les Places", superuser_places_path }
         end
       end
       
@@ -44,10 +44,10 @@ ActiveAdmin.register_page "Dashboard" do
         panel "Commentaires récents", :priority => 1 do
           table_for Comment.order("created_at desc").limit(5) do
             column("Status") { |ticket| status_tag(ticket.status) }
-            column("Nom", :name)   { |h| link_to h.name, [:admin, h] }
+            column("Nom", :name)   { |h| link_to h.name, [:superuser, h] }
             column("Commentaire", :comment) 
           end
-          strong { link_to "Voir tous les Commentaires", admin_comments_path }
+          strong { link_to "Voir tous les Commentaires", superuser_comments_path }
         end
       end
     end

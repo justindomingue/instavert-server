@@ -4,7 +4,7 @@
 
 ActiveAdmin.register Search, :as => "Recherche" do
   index do
-    column "Nom", :name do |p| link_to p.name, admin_place_path(p)
+    column "Nom", :name do |p| link_to p.name, superuser_place_path(p)
     end
     column "Enregistré?", :presence
     column "Date de recherche", :created_at
