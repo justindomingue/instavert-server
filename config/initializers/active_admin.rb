@@ -34,7 +34,7 @@ ActiveAdmin.setup do |config|
   #   config.default_namespace = false
   #
   # Default:
-  config.default_namespace = :superuser
+  config.default_namespace = false
   #
   # You can customize the settings for each namespace by using
   # a namespace block. For example, to change the site title
@@ -126,4 +126,15 @@ ActiveAdmin.setup do |config|
   #
   # To load a javascript file:
   #   config.register_javascript 'my_javascript.js'
+  
+  class ActiveAdmin::Views::Pages::Base < Arbre::HTML::Document
+      private
+ 
+      # Renders the content for the footer
+      def build_footer
+        div :id => "footer" do
+          para "Copyright &copy; #{Date.today.year.to_s}".html_safe
+        end
+      end
+    end
 end

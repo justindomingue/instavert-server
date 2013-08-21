@@ -1,7 +1,9 @@
 Mobile::Application.routes.draw do
     
-  ActiveAdmin.routes(self)
-  devise_for :admin_users, ActiveAdmin::Devise.config
+  scope :superuser, constraints: { subdomain: "superuser" } do
+    ActiveAdmin.routes(self)
+    devise_for :admin_users, ActiveAdmin::Devise.config.merge(path: "/")
+  end
 
   # Root
   root :to => "pages#accueil"
