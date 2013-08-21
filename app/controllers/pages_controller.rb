@@ -1,4 +1,8 @@
 class PagesController < ApplicationController
+  
+  def home
+  end
+  
   def accueil
     @title = "Instavert"
     @places_count   = Place.count

@@ -1,12 +1,12 @@
 Mobile::Application.routes.draw do
 
+  # Root
+  root :to => "pages#home"
+  
   ActiveAdmin.routes(self)
   devise_for :admin_users, ActiveAdmin::Devise.config
   devise_for :users
 
-  # Root
-  root :to => "pages#accueil"
-  
   match '/api', to:'schools#index'
   
   resources :places,   :path => "lieux"
@@ -16,6 +16,7 @@ Mobile::Application.routes.draw do
   resources :comments, :only => [:new, :create]
   
   # Statics pages
+  get '/home',           :to => 'pages#home'
   match '/astuces',      :to => 'pages#astuces'
   match '/instructions', :to => 'pages#instructions'
   match '/contacts',     :to => 'pages#contacts'

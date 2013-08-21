@@ -51,9 +51,8 @@ ActiveAdmin.setup do |config|
     ns.authentication_method = :authenticate_user!
     ns.current_user_method = :current_user
     ns.logout_link_path = :destroy_user_session_path
-    ns.logout_link_method = :delete
-    #ns.authorization_adapter = ActiveAdmin::CanCanAdapter
-    
+    ns.allow_comments = true
+    ns.authorization_adapter = ActiveAdmin::CanCanAdapter
   end
   
     # == User Authentication

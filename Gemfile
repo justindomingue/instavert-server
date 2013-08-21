@@ -1,11 +1,13 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.2.11'
-gem 'jquery-rails'
+gem 'jquery-rails', "2.3.0"
+
 gem 'mime-types', '1.17.2'
-gem "alphabar", "~> 0.1.0"
-gem "haml"
+
 gem "activeadmin"
+gem 'cancan'
+
 gem "rails-i18n"
 
 gem "active_model_serializers"
@@ -20,6 +22,7 @@ gem 'rack-cors', :require => 'rack/cors'
 # Search
 gem 'pg_search'
 
+
 group :production do
   gem "pg"
 end
@@ -29,11 +32,12 @@ end
 group :assets do
   gem 'sass-rails', "  ~> 3.2.3"
   gem 'coffee-rails', "~> 3.2.1"
+  gem "haml-rails"
+  gem "bootstrap-sass-rails", "~> 2.2.2.0"
   gem 'uglifier', '1.2.3'
   gem 'rspec-rails'
   gem 'webrat'
   gem 'annotate', :git => 'git://github.com/jeremyolliver/annotate_models.git', :branch => 'rake_compatibility'
-  gem 'pg'
 end
 
 group :test do
