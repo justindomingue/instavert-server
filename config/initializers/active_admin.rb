@@ -34,7 +34,7 @@ ActiveAdmin.setup do |config|
   #   config.default_namespace = false
   #
   # Default:
-  config.default_namespace = false
+  config.default_namespace = :superuser
   #
   # You can customize the settings for each namespace by using
   # a namespace block. For example, to change the site title
@@ -46,6 +46,15 @@ ActiveAdmin.setup do |config|
   #
   # This will ONLY change the title for the admin section. Other
   # namespaces will continue to use the main "site_title" configuration.
+  
+  config.namespace :admin do |ns|
+    ns.authentication_method = :authenticate_user!
+    ns.current_user_method = :current_user
+    ns.logout_link_path = :destroy_user_session_path
+    ns.logout_link_method = :delete
+    #ns.authorization_adapter = ActiveAdmin::CanCanAdapter
+    
+  end
   
     # == User Authentication
   #

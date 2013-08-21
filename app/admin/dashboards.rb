@@ -53,3 +53,7 @@ ActiveAdmin.register_page "Dashboard" do
     end
   end
 end
+
+ActiveAdmin.register_page "Dashboard", namespace: :admin do
+  menu :priority => 1, :label => "Tableau de bord"
+end
