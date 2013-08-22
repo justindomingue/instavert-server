@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
     if current_admin_user
       superuser_dashboard_path
     else
-      admin_dashboard_path
+      home_path
     end
   end
   

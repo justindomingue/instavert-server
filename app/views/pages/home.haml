@@ -1,13 +1,49 @@
 .jumbotron
-  - if user_signed_in?
-    %h1 Welcome back, trusted user!
+  %h1 Une Petite Révolution
+  %p
+    Instavert permet de connaitre instantanément où disposer d'une foule de matières. Inscrivez dès aujourd'hui votre établissement scolaire ou votre bureau!
+  %p
+    = link_to "Inscription", new_user_registration_path, :class => "btn btn-lg btn-success"
+
+.row.marketing
+  .col-lg-4
+    = image_tag 'iphone.png', class:'img-circle', width:'140', height:'140'
+    %h2 Personnalisation
+    %p À la suite de l'inscription, vous obtiendrez un accès illimité à un tableau de bord personnalisé pour gérer les matières et les récupérateurs de votre établissement.
     %p
-      You have signed in!  If this were a real app some sweet conent
-      would go here.  But it's just a test.  You might want to sign out now.
-    = link_to "Sign Out", destroy_user_session_path, :method => :get, :class => 'btn btn-large btn-danger'
-  - else
-    %h1 Une Petite Révolution
+      %a.btn.btn-default{href:'#'} Voir les détails »
+  .col-lg-4
+    = image_tag 'iphone.png', class:'img-circle', width:'140', height:'140'
+    %h2 Personnalisation
+    %p À la suite de l'inscription, vous obtiendrez un accès illimité à un tableau de bord personnalisé pour gérer les matières et les récupérateurs de votre établissement.
     %p
-      Instavert permet de connaitre instantanément où disposer d'une foule de matières.
+      %a.btn.btn-default{href:'#'} Voir les détails »
+  .col-lg-4
+    = image_tag 'iphone.png', class:'img-circle', width:'140', height:'140'
+    %h2 Personnalisation
+    %p À la suite de l'inscription, vous obtiendrez un accès illimité à un tableau de bord personnalisé pour gérer les matières et les récupérateurs de votre établissement.
     %p
-      = link_to "Inscription", new_user_registration_path, :class => "btn btn-lg btn-success"
+      %a.btn.btn-default{href:'#'} Voir les détails »
+      
+%hr.featurette-divider
+.row.featurette
+  .col-md-7
+    %h2.featurette-heading
+      Une interface épurée.
+      %span.text-muted 
+    %p.lead
+      Nos ingénieurs ont porté un soin particulier à l'interface utilisateur afin de la simplifier, tout en conservant un design moderne.
+  .col-md-5
+    = image_tag 'featurette1.png', class:'featurette-image img-responsive img-thumbnail'
+      
+%hr.featurette-divider
+.row.featurette
+  .col-md-5
+    = image_tag 'bg.png', class:'featurette-image img-responsive'
+  .col-md-7
+    %h2.featurette-heading
+      Une interface épurée.
+      %span.text-muted 
+    %p.lead
+      Nos ingénieurs ont porté un soin particulier à l'interface utilisateur afin de la simplifier, tout en conservant un design moderne.
+      
