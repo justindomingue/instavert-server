@@ -39,7 +39,7 @@ ActiveAdmin.register Place, namespace: :admin do
   end
   
   index do
-    column "Nom", :name do |p| link_to p.name, superuser_place_path(p)
+    column "Nom", :name do |p| link_to p.name, admin_place_path(p)
     end
     column "Matières" do |p| p.products.name end
     column "Description", :description
@@ -62,5 +62,11 @@ ActiveAdmin.register Place, namespace: :admin do
       f.input :tags
       f.buttons
     end
+  end
+  
+  sidebar :aide do
+    span "Besoin d'aide? Envoyez-nous un courriel à"
+    strong "aide@instavert.com"
+    span ". Votre administrateur vous répondra sous peu."
   end
 end

@@ -33,11 +33,10 @@ ActiveAdmin.register Product, :as => "Matiere", namespace: :admin do
   end
   
   index do
-    column "Nom", :name, :sortable => :name do |p| link_to p.name, superuser_matiere_path(p)
+    column "Nom", :name, :sortable => :name do |p| link_to p.name, admin_matiere_path(p)
     end
     column "Lieux" do |p| p.places.name end
     column :tags
-    column "Établissement", :school
     column "Vues", :views
     default_actions
   end
@@ -51,5 +50,11 @@ ActiveAdmin.register Product, :as => "Matiere", namespace: :admin do
       f.input :tags
       f.buttons
     end
+  end
+  
+  sidebar :aide do
+    span "Besoin d'aide? Envoyez-nous un courriel à"
+    strong "aide@instavert.com"
+    span ". Votre administrateur vous répondra sous peu."
   end
 end
