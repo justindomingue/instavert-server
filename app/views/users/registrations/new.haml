@@ -4,6 +4,7 @@
     = devise_error_messages!
     
     .form-group
+      %span.help-block Pour inscrire un nouvel établissement scolaire, entrer les informations de contact de la personne responsable. Nous vous contacterons sous peu pour vous offrir une solution personnalisée.
       = f.email_field :email, :placeholder => 'Adresse couriel', class:'form-control'
       = f.password_field :password, :placeholder => 'Mot de passe', class:'form-control'
       = f.password_field :password_confirmation, :placeholder => 'Confirmation de mot de passe', class:'form-control'
@@ -12,5 +13,5 @@
       = f.text_field :phone_number, :placeholder => 'Numéro de téléphone du responsable', class:'form-control'
       = f.text_field :city, :placeholder => 'Ville', class:'form-control'
     %br/
-    = f.submit "Sign up",:class=>'btn btn-primary'
-  = render "devise/shared/links"
+    = f.submit "Enregistrer",:class=>'btn btn-success'
+  = render "users/shared/links"
