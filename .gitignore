@@ -5,3 +5,6 @@ tmp/
 .sass-cache/
 .redcar*
 .redcar/*
+
+# Ignore application configuration
+/config/application.yml
