@@ -12,6 +12,7 @@ gem "rails-i18n"
 
 gem "active_model_serializers"
 gem 'figaro'
+
 # Database
 gem 'pg'
 
