@@ -4,10 +4,8 @@ body {
 }
 
 .masthead h3 { 
-  font: {
-    family: 'Lobster';
-    size: 4em;
-  }
+  font-family: 'Lobster';
+  font-size: 4em;
 }
 
 /* Custom container */
