@@ -13,5 +13,12 @@
         = render 'layouts/user_header'
         %h3.muted= link_to "Instavert", root_path
         %h5.muted Récupérer mieux, être plus heureux!
-      %hr/
+      %hr
+      = render 'users/shared/flash', flash: flash
       = yield
+      .masthead
+      %hr
+      .nav.nav-pills.pull-right
+        = link_to 'About', superuser_dashboard_path
+        |
+        = link_to 'Super User', superuser_dashboard_path

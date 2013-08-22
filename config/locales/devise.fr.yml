@@ -16,6 +16,7 @@ fr:
       timeout: "Votre session est expirée, veuillez vous reconnecter pour continuer."
       unauthenticated: "Vous devez vous connecter ou vous inscrire pour continuer."
       unconfirmed: "Vous devez valider votre compte pour continuer."
+      not_approved: "Votre compte n'a pas encore été approuvé par votre administrateur."
     mailer:
       confirmation_instructions:
         subject: "Instructions de confirmation"
@@ -40,6 +41,8 @@ fr:
       signed_up_but_unconfirmed: 'Un message contenant un lien de confirmation a été envoyé à votre adresse email. Ouvrez ce lien pour activer votre compte.'
       update_needs_confirmation: "Votre compte a bien été mis à jour mais nous devons vérifier votre nouvelle adresse email. Merci de vérifier vos emails et de cliquer sur le lien de confirmation pour finaliser la validation de votre nouvelle adresse."
       updated: 'Votre compte a été modifié avec succès.'
+      user:
+        signed_up_but_not_approved: "Vous avez été connecté avec succès, mais votre n'a pas encore été approuvé par votre administrateur."
     sessions:
       signed_in: "Connecté."
       signed_out: "Déconnecté."
