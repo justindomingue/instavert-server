@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+  %body
+    %h1
+      Nouvel établissement scolaire en attente d'activation
+    %p= @user.contact_name
+    %p= @user.phone_number
+    %p= @user.city
+    %hr
+    %p= @user.email
+
+    %p
+      Pour activer le compte, suivre ce lien:
+      = link_to 'Tableau de bord', superuser_dashboard_path
