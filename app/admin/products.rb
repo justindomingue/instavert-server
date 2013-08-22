@@ -25,6 +25,13 @@ ActiveAdmin.register Product, :as => "Matiere" do
 end
 
 ActiveAdmin.register Product, :as => "Matiere", namespace: :admin do
+  controller do
+    def create
+      params[:matiere][:school_d] = current_user.school.id
+      create!
+    end
+  end
+  
   index do
     column "Nom", :name, :sortable => :name do |p| link_to p.name, superuser_matiere_path(p)
     end

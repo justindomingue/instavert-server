@@ -31,6 +31,13 @@ ActiveAdmin.register Place do
 end
 
 ActiveAdmin.register Place, namespace: :admin do
+  controller do
+    def create
+      params[:place][:school_d] = current_user.school.id
+      create!
+    end
+  end
+  
   index do
     column "Nom", :name do |p| link_to p.name, superuser_place_path(p)
     end
