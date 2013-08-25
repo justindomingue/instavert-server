@@ -7,7 +7,8 @@ Mobile::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   devise_for :users
 
-  resources :subscriptions
+  resources :subscriptions, :path => "abonnements"
+  get '/subscriptions/active', to:'subscriptions#active', as:'active_subscription'
   
   match '/api', to:'schools#index'
   

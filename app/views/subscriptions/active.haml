@@ -1,0 +1,43 @@
+.border-form-div.border-form-div
+  %h2 Abonnement actuel
+  %br
+  .panel.panel-info
+    .panel-heading Détails de l'abonnement
+    .panel-body
+      %p
+        %b Plan :
+        Abonnement mensuel
+      %p
+        %b Valeur :
+        15$/mois
+      %p
+        %b Statut :
+        = render partial:'status', locals: { status:@customer["subscription"]["status"]}
+      .plusinfo
+        %p
+          %b Début de la période courante :
+          = I18n.l Time.at(@customer["subscription"]["current_period_start"])
+        %p
+          %b Fin de la période courante :
+          = I18n.l Time.at(@customer["subscription"]["current_period_end"])
+        %p
+          %b Fin de la période d'essai :
+          = I18n.l Time.at(@customer["subscription"]["trial_end"])
+      .btn-group.float-right
+        %button.btn.btn-sm.btn-primary.sub-plusinfo Plus
+        %button.btn.btn-sm.btn-danger.sub-annuler Annuler
+  .panel.panel-info.panel-credit-card
+    .panel-heading Carte de crédit
+    .panel-body
+      .credit-card-info
+        %p
+          %b 4 derniers chiffres :
+          = @user.last_4
+        %p
+          %b Type :
+          = @user.card_type
+        .btn-group.float-right
+          %button.btn.btn-sm.btn-primary.sub-changer Changer
+          %button.btn.btn-sm.btn-danger.sub-detruire Détruire
+      .credit-card-form
+        = render 'form'

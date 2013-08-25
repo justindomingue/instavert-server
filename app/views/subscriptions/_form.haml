@@ -1,0 +1,22 @@
+= form_tag subscriptions_path, id:'payment-form', autocomplete:'on' do
+  .form-group
+    - if params[:action] == 'new'
+      %span.help-block Ajouter un abonnement pour accéder au tableau de bord.
+    - else
+      %span.help-block Modifier votre carte de crédit détruira la précédente.
+    %span.help-block
+      %b Le formulaire suivant sera envoyé directement à notre processeur de paiement.
+    %span.help-block.payment-errors
+    = text_field_tag nil, nil, placeholder:'Numéro de carte de crédit', class:'form-control cc-num', "data-stripe"=>'number'
+    
+    = text_field_tag nil, nil, placeholder:'Code de sécurité (CVC)', class:'form-control cc-cvc', "data-stripe"=>'cvc', autocomplete:'off'
+    
+    = label_tag :expiration, "Expiration (MM/YYYY)"
+    = select_month nil, { add_month_numbers_true: true}, { name:nil, "data-stripe"=>"exp-month"}
+    = select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, "data-stripe"=>"exp-year"}
+  
+  - if params[:action] == 'new'
+    = submit_tag 'Enregistrer', class:'btn btn-lg btn-primary', "data-loading-text"=>"En traitement..."
+  - elsif params[:action] == 'active'
+    = submit_tag 'Enregistrer', class:'btn btn btn-info', "data-loading-text"=>"En traitement..."
+    %button.btn.btn-default.annuler-change-cc Annuler

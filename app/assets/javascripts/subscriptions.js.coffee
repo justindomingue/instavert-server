@@ -1,4 +1,33 @@
 jQuery ->
+  # ======== ABONNEMENT ACTUEL =========
+  $('div.plusinfo').hide()
+  $('.credit-card-form').hide()
+  
+  $('.btn.sub-plusinfo').click( ->
+    $('div.plusinfo').toggle('400')
+    
+    if $('.btn.sub-plusinfo').text() == "Plus"
+      $('.btn.sub-plusinfo').text "Moins"
+    else
+      $('.btn.sub-plusinfo').text "Plus"
+  )
+  
+  $('.btn.sub-annuler').click( ->
+    c = confirm "Êtes-vous sûr de vouloir annuler l'abonnement?"
+    
+    if c is true
+      alert 'ok!'
+  )
+  
+  $('.btn.sub-changer').click ->
+    $('.panel-credit-card .credit-card-info').toggle('slow')
+    $('.credit-card-form').toggle('slow')
+    
+  $('.btn.annuler-change-cc').click ->
+    $('.panel-credit-card .credit-card-info').toggle('slow')
+    $('.credit-card-form').toggle('slow')
+  
+  # ======== STRIPE =========
   Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content'))
   
   $("#payment-form input, #payment-form select").attr("disabled", false);
@@ -48,7 +77,6 @@ jQuery ->
     
       # Insert the token into the form so it gets submitted to the server
       $form.append $("<input type=\"hidden\" name=\"stripeToken\" />").val(token)
-      $form.append $("<input type=\"hidden\" name=\"email\" />").val($('#email-field').val())
     
       # and submit
       $form.get(0).submit()

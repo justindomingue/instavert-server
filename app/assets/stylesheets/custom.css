@@ -43,6 +43,12 @@ body {
 
 /* OTHER */
 
+.panel-heading { font-weight: bold;}
+.centering { text-align: center;}
+
+.btn.sub-plusinfo { width: 64px; }
+.float-right { float: right; }
+
 .icon {
   float:left;
   margin-right: 16px;
