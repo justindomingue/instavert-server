@@ -16,3 +16,5 @@
 //= require_directory .
 //= require twitter/bootstrap
 //= require custom
+//= require subscriptions
+//= require payment.jquery

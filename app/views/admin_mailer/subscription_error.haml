@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+  %body
+    %h1
+      Erreur d'abonnement
+      
+    %h2 Utilisateur
+    %p= @user.contact_name
+    %p= @user.phone_number
+    %p= @user.city
+    %p
+      %strong= @user.email
+
+    %h2 Message
+    %p= @message

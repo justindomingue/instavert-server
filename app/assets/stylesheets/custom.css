@@ -58,3 +58,5 @@ body {
 .dropdown-menu .glyphicon {
   margin-right: 7px;
 }
+
+.payment-errors { color: red; }

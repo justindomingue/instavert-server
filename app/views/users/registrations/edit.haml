@@ -9,6 +9,7 @@
       
       %hr
       %h4 Identifiants
+      %br
       = f.email_field :email, :placeholder => 'Adresse couriel', class:'form-control', autofocus:true
       
       %span.help-block Laisser les champs vides pour conserver le mot de passe actuel
@@ -17,6 +18,7 @@
       = f.password_field :current_password , :placeholder => 'Mot de passe actuel', class:'form-control'
       %hr
       %h4 Information de contact
+      %br
       = f.text_field :contact_name, :placeholder => 'Nom du responsable', class:'form-control'
       = f.text_field :phone_number, :placeholder => 'Numéro de téléphone du responsable', class:'form-control'
       = f.text_field :city, :placeholder => 'Ville', class:'form-control'

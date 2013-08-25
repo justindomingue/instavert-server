@@ -53,6 +53,7 @@ ActiveAdmin.setup do |config|
     ns.logout_link_path = :destroy_user_session_path
     ns.allow_comments = true
     ns.authorization_adapter = ActiveAdmin::CanCanAdapter
+    
   end
   
     # == User Authentication
@@ -116,8 +117,6 @@ ActiveAdmin.setup do |config|
   #
   # You can add before, after and around filters to all of your
   # Active Admin resources from here.
-  #
-  # config.before_filter :do_something_awesome
 
 
   # == Register Stylesheets & Javascripts

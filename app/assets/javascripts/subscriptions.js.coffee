@@ -1,0 +1,54 @@
+jQuery ->
+  Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content'))
+  
+  $("#payment-form input, #payment-form select").attr("disabled", false);
+  
+  # Set some form features with Payment.jQuery
+  $('input.cc-num').payment('formatCardNumber')
+  $('input.cc-cvc').payment('formatCardCVC');
+  
+  # SEND FORM TO STIPE AFTER VALIDATION
+  $('#payment-form').submit( (event) ->
+    $form = $(this);
+    $error = $('.payment-errors')
+    
+    $error.text ""
+    
+    # Validate before sending
+    if !$.payment.validateCardNumber($('[data-stripe=number]').val())
+      $error.text 'Numéro de carte invalide'
+      return false
+    else if !$.payment.validateCardCVC($('[data-stripe=cvc]').val(), $.payment.cardType($('[data-stripe=number]').val()))
+      $error.text 'Code de sécurité invalide'
+      return false
+    else if !$.payment.validateCardExpiry($('[data-stripe=exp-month]').val(), $('[data-stripe=exp-year]').val())
+      $error.text 'Expiration invalide'
+      return false
+    else
+      $form.find('.btn').button('loading')
+      $("#payment-form input, #payment-form select").attr("disabled", true);
+    
+      Stripe.createToken($form, stripeResponseHandler)
+    
+    return false
+  )
+  
+  stripeResponseHandler = (status, response) ->
+    $form = $("#payment-form")
+    if response.error
+      # Show the errors on the form
+      $form.find(".payment-errors").html 'Message du processeur de paiement (anglais): ' + '<em>' + response.error.message + '</em>'
+      $form.find('.btn').button('reset')
+      $("#payment-form input, #payment-form select").attr("disabled", false);
+      
+    else
+    
+      # token contains id, last4, and card type
+      token = response.id
+    
+      # Insert the token into the form so it gets submitted to the server
+      $form.append $("<input type=\"hidden\" name=\"stripeToken\" />").val(token)
+      $form.append $("<input type=\"hidden\" name=\"email\" />").val($('#email-field').val())
+    
+      # and submit
+      $form.get(0).submit()

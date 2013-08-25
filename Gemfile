@@ -13,6 +13,8 @@ gem "rails-i18n"
 gem "active_model_serializers"
 gem 'figaro'
 
+gem 'stripe'
+
 # Database
 gem 'pg'
 
