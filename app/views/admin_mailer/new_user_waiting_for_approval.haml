@@ -5,12 +5,24 @@
   %body
     %h1
       Nouvel établissement scolaire en attente d'activation
-    %p= @user.contact_name
-    %p= @user.phone_number
-    %p= @user.school_name
+    
+    %h3 Contact
+    %p
+      Nom du responsable :
+      = @user.contact_name
+    %p
+      Numéro de téléphone
+      = @user.phone_number
+    %p
+      Établissement
+      = @user.school_name
+    %p
+      Courriel
+      %strong= @user.email
+    
     %hr
-    %p= @user.email
-
+    
+    %h3 Instructions d'activation
     %p
       Pour activer le compte, suivre ce lien:
       = link_to 'Tableau de bord', superuser_dashboard_url

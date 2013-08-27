@@ -7,11 +7,20 @@
       Erreur d'abonnement
       
     %h2 Utilisateur
-    %p= @user.contact_name
-    %p= @user.phone_number
-    %p= @user.school_name
     %p
+      Nom du responsable :
+      = @user.contact_name
+    %p
+      Numéro de téléphone
+      = @user.phone_number
+    %p
+      Établissement
+      = @user.school_name
+    %p
+      Courriel
       %strong= @user.email
+    
+    %hr
 
     %h2 Message
     %p= @message
