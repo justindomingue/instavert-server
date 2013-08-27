@@ -42,6 +42,12 @@ body {
   padding: 7px 9px;
 }
 
+.jumbotron {
+  background-image: url('/assets/bg.jpg');
+  color: white;
+  background-position: 0;
+  background-size: 100% 300%;
+}
 /* OTHER */
 
 .panel-heading { font-weight: bold;}
