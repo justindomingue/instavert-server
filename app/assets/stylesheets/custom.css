@@ -27,6 +27,7 @@ body {
           box-shadow: 0 1px 2px rgba(0,0,0,.05);
 }
 .border-form-div-small { max-width: 300px !important; }
+.border-form-div-large { max-width: 500px !important; }
 .border-form-div form, .border-form-div h2 { text-align: center;}
 .border-form-div .form-signin-heading,
 .border-form-div .checkbox {
