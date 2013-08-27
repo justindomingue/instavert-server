@@ -14,20 +14,10 @@ Mobile::Application.routes.draw do
   
   resources :places,   :path => "lieux"
   resources :products, :path => "matieres"
-
-  match '/commentaires', :to => 'comments#new', :as => :comment
-  resources :comments, :only => [:new, :create]
   
   # Statics pages
   get '/home',           :to => 'pages#home'
-  match '/astuces',      :to => 'pages#astuces'
-  match '/instructions', :to => 'pages#instructions'
-  match '/contacts',     :to => 'pages#contacts'
-  match '/apropos',      :to => 'pages#apropos'
-  match '/recherche',    :to => 'pages#recherche'
-  match '/favoris',      :to => 'pages#favoris'
-  match '/statistiques', :to => 'pages#statistiques'
-  
+ 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
