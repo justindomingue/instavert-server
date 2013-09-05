@@ -22,12 +22,7 @@ gem 'pg'
 gem 'thin'
 gem 'rack-cors', :require => 'rack/cors'
 
-# Search
-gem 'pg_search'
-
-
 group :production do
-  gem "pg"
 end
 
 # Gems used only for assets and not required
@@ -48,5 +43,4 @@ group :test do
   gem 'turn', :require => false
   gem 'rspec'
   gem 'webrat'
-  gem 'pg'
 end

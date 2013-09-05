@@ -39,17 +39,6 @@ ActiveAdmin.register_page "Dashboard" do
           strong { link_to "Voir toutes les Places", superuser_places_path }
         end
       end
-      
-      column do
-        panel "Commentaires récents", :priority => 1 do
-          table_for Comment.order("created_at desc").limit(5) do
-            column("Status") { |ticket| status_tag(ticket.status) }
-            column("Nom", :name)   { |h| link_to h.name, [:superuser, h] }
-            column("Commentaire", :comment) 
-          end
-          strong { link_to "Voir tous les Commentaires", superuser_comments_path }
-        end
-      end
     end
   end
 end
