@@ -7,7 +7,7 @@ class SchoolsController < ApplicationController
     if params[:school]
       @school = School.find_by_id params[:school]
       if @school
-        respond_with @school, :location => nil
+        respond_with @school
       else
         respond_with School.first, meta: { message:'Établissement introuvable. Base de données par défaut chargée.', error:'No school responds to the given ID (' + params[:school] + ').' }
       end
