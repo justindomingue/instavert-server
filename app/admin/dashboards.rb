@@ -3,7 +3,7 @@
 
 ActiveAdmin.register_page "Dashboard" do
 
-  menu :priority => 1, :label => "Dashboard" 
+  menu :priority => 1, :label => "Tableau de bord" 
   
   content do
     columns do
@@ -60,7 +60,7 @@ ActiveAdmin.register_page "Dashboard", namespace: :admin do
   content do
     columns do
       column do
-        panel "Vos 5 Dernières Matières" do
+        panel "Vos Dernières Matières" do
           table_for current_user.school.products.order("created_at desc").limit(5) do |p|
             p.column "Nom", :name do |product|
               link_to product.name, admin_matiere_path(product)
@@ -71,7 +71,7 @@ ActiveAdmin.register_page "Dashboard", namespace: :admin do
       end
       
       column do
-        panel "Vos 5 Derniers Récupérateurs" do
+        panel "Vos Derniers Récupérateurs" do
           table_for current_user.school.places.order("created_at desc").limit(5) do
             column "Nom", :name do |place|
               link_to place.name, admin_place_path(place)

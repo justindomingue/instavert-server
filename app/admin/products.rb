@@ -35,9 +35,11 @@ ActiveAdmin.register Product, :as => "Matiere", namespace: :admin do
   index do
     column "Nom", :name, :sortable => :name do |p| link_to p.name, admin_matiere_path(p)
     end
-    column "Lieux" do |p| p.places.name end
+    column "Lieux" do |p|
+      p.places.map { |p| p.name }.join('<br />').html_safe
+    end
     column :tags
-    column "Vues", :views
+    # column "Vues", :views
     default_actions
   end
   
@@ -48,8 +50,9 @@ ActiveAdmin.register Product, :as => "Matiere", namespace: :admin do
     f.inputs "Détails" do
       f.input :name, :label => "Nom"
       f.input :tags
-      f.buttons
+      f.input :places, as: :check_boxes, collection: current_user.school.places, label:"Récupérateur(s)"
     end
+    f.actions
   end
   
   sidebar :aide do

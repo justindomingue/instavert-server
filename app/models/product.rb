@@ -1,7 +1,7 @@
 class Product < ActiveRecord::Base
   default_scope :order => "name ASC"
   
-  attr_accessible :name, :tags
+  attr_accessible :name, :tags, :place_ids
   include PgSearch
   
   validates :name, :presence => true, :uniqueness => { :case_sensitive => false }

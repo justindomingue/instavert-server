@@ -1,7 +1,7 @@
 class Place < ActiveRecord::Base
   default_scope :order => "name ASC"
   
-  attr_accessible :name, :content, :tags, :thumb, :description
+  attr_accessible :name, :content, :tags, :thumb, :description, :product_ids
   include PgSearch
   
   validates :name, :presence => true, :uniqueness => { :case_sensitive => false }
