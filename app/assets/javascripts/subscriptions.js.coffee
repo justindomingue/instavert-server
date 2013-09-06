@@ -6,7 +6,7 @@ jQuery ->
   $('.btn.sub-plusinfo').click( ->
     $('div.plusinfo').toggle('400')
     
-    if $('.btn.sub-plusinfo').text() == "Plus"
+    if $('.btn.sub-plusinfo').text() is "Plus"
       $('.btn.sub-plusinfo').text "Moins"
     else
       $('.btn.sub-plusinfo').text "Plus"
@@ -20,8 +20,16 @@ jQuery ->
   )
   
   $('.btn.sub-changer').click ->
-    $('.panel-credit-card .credit-card-info').toggle('slow')
-    $('.credit-card-form').toggle('slow')
+    # $('.panel-credit-card .credit-card-info').toggle('slow')
+    # $('.credit-card-form').toggle('slow')
+    
+    $('.credit-card-info').children('.alert').remove()
+    $('.credit-card-info').prepend('<div class="alert alert-warning">Pour l\'instant, vous ne pouvez que supprimer une carte de crédit. Pour la changer, contactez-nous.</div>')
+    
+  $('.btn.sub-detruire').click ->
+    $('.credit-card-info').children('.alert').remove()
+    $('.credit-card-info').prepend('<div class="alert alert-warning">Suppression de carte de crédit à venir! Pour l\'instant, contacter votre administrateur.')
+    
     
   $('.btn.annuler-change-cc').click ->
     $('.panel-credit-card .credit-card-info').toggle('slow')

@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require_self
-//= require_directory .
 //= require twitter/bootstrap
 //= require custom
 //= require subscriptions
