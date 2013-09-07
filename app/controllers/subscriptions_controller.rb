@@ -32,7 +32,7 @@ class SubscriptionsController < ApplicationController
     current_user.subscribed = true
   
     if current_user.save
-      redirect_to active_subscription_path, notice:'Abonnement réussi. Vous carte sera automatiquement chargée à la fin de la période d\'essai (dans sept jours).'
+      redirect_to active_subscription_path, notice:'Abonnement réussi. Vous carte sera automatiquement chargée à la fin de la période d\'essai de sept (7) jours).'
     else
       redirect_to new_subscription_path, error:"Une erreur est survenue lors de l'activation de l'enregistrement"
     end
