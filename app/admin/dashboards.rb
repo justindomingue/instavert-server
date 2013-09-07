@@ -63,10 +63,10 @@ ActiveAdmin.register_page "Dashboard", namespace: :admin do
         panel "Vos Derniers Récupérateurs" do
           table_for current_user.school.places.order("created_at desc").limit(5) do
             column "Nom", :name do |place|
-              link_to place.name, admin_place_path(place)
+              link_to place.name, admin_recuperateur_path(place)
             end
           end
-          strong { link_to "Voir toutes les Places", admin_places_path }
+          strong { link_to "Voir toutes les Places", admin_recuperateurs_path }
         end
       end
     end

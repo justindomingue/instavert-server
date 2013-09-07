@@ -25,6 +25,8 @@ ActiveAdmin.register Product, :as => "Matiere" do
 end
 
 ActiveAdmin.register Product, :as => "Matiere", namespace: :admin do
+  config.sort_order = "name_asc"
+  
   controller do
     def create
       params[:matiere][:school_d] = current_user.school.id
@@ -50,7 +52,7 @@ ActiveAdmin.register Product, :as => "Matiere", namespace: :admin do
     f.inputs "Détails" do
       f.input :name, :label => "Nom"
       f.input :tags
-      f.input :places, as: :check_boxes, collection: current_user.school.places, label:"Récupérateur(s)"
+      f.input :places, as: :check_boxes, collection: current_user.school.places, label:"Récupérateur"
     end
     f.actions
   end

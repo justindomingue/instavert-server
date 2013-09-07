@@ -30,7 +30,9 @@ ActiveAdmin.register Place do
   end
 end
 
-ActiveAdmin.register Place, namespace: :admin do
+ActiveAdmin.register Place, namespace: :admin, :as => "Recuperateur" do  
+  config.sort_order = "name_asc"
+  
   controller do
     def create
       params[:place][:school_d] = current_user.school.id
@@ -39,7 +41,7 @@ ActiveAdmin.register Place, namespace: :admin do
   end
   
   index do
-    column "Nom", :name do |p| link_to p.name, admin_place_path(p) end
+    column "Nom", :name do |p| link_to p.name, admin_recuperateur_path(p) end
     column "Matières" do 
       |p| p.products.map { |p| link_to p.name, admin_matiere_path(p) }.join('<br/>').html_safe
     end
@@ -58,6 +60,14 @@ ActiveAdmin.register Place, namespace: :admin do
   show do |p|
     attributes_table do
       row :name
+      row :tags
+      row :description
+      row :responsable
+      row "Téléphone" do p.telephone end
+      row "Courriel" do p.courriel end
+      row "Local" do p.local end
+      row "Heures" do p.heure end
+      row :autre
     end
   end
     
@@ -67,7 +77,14 @@ ActiveAdmin.register Place, namespace: :admin do
       # f.input :description, :label => "Descrition"
       # f.input :thumb, :label => "Vignette (URL)"
       f.input :tags
-      f.input :producte2
+      f.input :description
+      f.input :responsable
+      f.input :telephone
+      f.input :courriel
+      f.input :local
+      f.input :heure
+      f.input :autre
+      f.input :products, as: :check_boxes, collection: current_user.school.products, label:"Matières"
     end
     f.actions
   end
