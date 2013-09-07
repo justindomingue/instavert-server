@@ -1,6 +1,7 @@
 class ProductSerializer < ActiveModel::Serializer
   embed :ids
   attributes :id, :name, :tags, :category
+  attribute :category, key: :thumb
   
   has_many :places
   
