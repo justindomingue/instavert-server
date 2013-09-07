@@ -38,23 +38,50 @@ ActiveAdmin.register Product, :as => "Matiere", namespace: :admin do
     column "Nom", :name, :sortable => :name do |p| link_to p.name, admin_matiere_path(p)
     end
     column "Lieux" do |p|
-      p.places.map { |p| p.name }.join('<br />').html_safe
+      p.places.map { |p| link_to p.name, admin_recuperateur_path(p) }.join('<br />').html_safe
     end
     column :tags
-    # column "Vues", :views
+    column "Catégorie", :category
     default_actions
   end
   
   filter :name, :label => 'par nom'
   filter :tags, :label => 'par tags'
   
+  show do |p|
+    attributes_table do
+      row "Nom" do p.name end
+      row :tags
+      row "Catégorie" do p.category end
+      row "Récupérateurs" do (p.places.map { |place| link_to place.name, admin_recuperateur_path(place) }.join('<br/>')).html_safe end
+    end
+  end
+    
+    
   form do |f|
     f.inputs "Détails" do
       f.input :name, :label => "Nom"
       f.input :tags
-      f.input :places, as: :check_boxes, collection: current_user.school.places, label:"Récupérateur"
+      f.input :category,label:'Catégorie', as: :radio, collection:['Contenant', 'Électronique', 'Lumière', 'Maison', 'Matériaux de construction', 'Matériel de bureau', 'Nourriture', 'Papier', 'Santé', 'Vêtement', 'Autre']
+      f.input :places, as: :check_boxes, collection: current_user.school.places, label:"Récupérateurs"
     end
     f.actions
+  end
+  
+  sidebar "Explication des champs", :except => :index do
+    strong "Nom: "
+    span "nom affiché dans l'application."
+    br
+    strong "Tags: "
+    span "mots-clés associés pour étendre la recherche."
+    br
+    strong "Catégorie: "
+    span "spécifie l'image à afficher pour chaque matière (l'utilisateur "
+    strong "ne verra pas "
+    span "la catégorie)."
+    br
+    strong "Récupérateurs: "
+    span "spéciifie au moins un lieu de récupération de la matière."
   end
   
   sidebar :aide do

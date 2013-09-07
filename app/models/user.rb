@@ -12,6 +12,10 @@ class User < ActiveRecord::Base
   
   after_create :send_admin_mail
   
+  validates :contact_name, :presence => true
+  validates :phone_number, presence:true
+  validates :school_name, presence:true
+  
   def send_admin_mail
     AdminMailer.new_user_waiting_for_approval(self).deliver
   end
