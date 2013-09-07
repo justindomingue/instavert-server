@@ -8,8 +8,12 @@ class ApplicationController < ActionController::Base
     redirect_to root_url, :alert => exception.message
   end
   
-  def is_subscribed?
-    redirect_to root_url, :notice => 'Vous devez vous abonner pour accéder au tableau de bord.' if !current_user.subscribed
+  def subscribed?
+    unless current_admin_user
+      if !current_user.subscribed
+        redirect_to new_subscription_path, alert:"Vous n'êtes pas encore abonné."
+      end
+    end
   end
   
   def after_sign_in_path_for(resource)
