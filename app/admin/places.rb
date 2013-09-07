@@ -45,7 +45,7 @@ ActiveAdmin.register Place, namespace: :admin, :as => "Recuperateur" do
     column "Matières" do 
       |p| p.products.map { |p| link_to p.name, admin_matiere_path(p) }.join('<br/>').html_safe
     end
-    # column "Description", :description
+    column "Description", :description
     # column :content
     column :tags
     # column "Vignette (URL)", :thumb
