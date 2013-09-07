@@ -8,7 +8,8 @@ Mobile::Application.routes.draw do
   devise_for :users
 
   resources :subscriptions, :path => "abonnements"
-  get '/subscriptions/active', to:'subscriptions#active', as:'active_subscription'
+  get '/abonnement/actif', to:'subscriptions#active', as:'active_subscription'
+  post '/abonnement/annuler', to:'subscriptions#cancel', as:'cancel_subscription'
   
   match '/api', to:'schools#index'
   

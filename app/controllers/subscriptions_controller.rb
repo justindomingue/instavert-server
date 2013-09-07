@@ -32,7 +32,6 @@ class SubscriptionsController < ApplicationController
     current_user.subscribed = true
   
     if current_user.save
-      date = Date.today + 7
       redirect_to active_subscription_path, notice:'Abonnement réussi. Vous carte sera automatiquement chargée à la fin de la période d\'essai (dans sept jours).'
     else
       redirect_to new_subscription_path, error:"Une erreur est survenue lors de l'activation de l'enregistrement"
@@ -50,5 +49,27 @@ class SubscriptionsController < ApplicationController
     logger.error e.message
     flash[:error] = "Notre processeur de paiement a rencontré une erreur avec votre carte de crédit."
     render :action => :new
+  end
+  
+  
+  def cancel
+    if current_user.valid_password?(params[:password])
+      cu = Stripe::Customer.retrieve(current_user.stripe_id)
+      cancel = cu.cancel_subscription
+      cu.delete
+    
+      if cancel.status == 'canceled'
+        current_user.stripe_id = nil
+        current_user.last_4 = nil
+        current_user.card_type = nil
+        current_user.subscribed = false
+        current_user.save
+        redirect_to root_path, notice:'Abonnement annulé et carte de crédit supprimée.'
+      else
+        redirect_to active_subscription_path, alert:'Une erreur est survenue lors de l\'annulation de votre abonnement.'
+      end
+    else
+      redirect_to active_subscription_path, alert:'Mot de passe invalide.'
+    end
   end
 end

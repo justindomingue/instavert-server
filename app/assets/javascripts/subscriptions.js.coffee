@@ -1,24 +1,31 @@
 jQuery ->
   # ======== ABONNEMENT ACTUEL =========
-  $('div.plusinfo').hide()
+  $plusinfo = $('.btn.sub-plusinfo')
+  $divplusinfo = $('div.plusinfo')
+  $annulation = $('.annulation')
+  
+  $divplusinfo.hide()
   $('.credit-card-form').hide()
+  $annulation.hide()
   
-  $('.btn.sub-plusinfo').click( ->
-    $('div.plusinfo').toggle('400')
+  $plusinfo.click( ->
+    $divplusinfo.toggle('400')
     
-    if $('.btn.sub-plusinfo').text() is "Plus"
-      $('.btn.sub-plusinfo').text "Moins"
+    if $plusinfo.text() is "Plus"
+      $plusinfo.text "Moins"
     else
-      $('.btn.sub-plusinfo').text "Plus"
+      $plusinfo.text "Plus"
   )
   
+  # Annuler
   $('.btn.sub-annuler').click( ->
-    c = confirm "Êtes-vous sûr de vouloir annuler l'abonnement?"
-    
-    if c is true
-      alert 'ok!'
+    $annulation.show()
   )
   
+  $('.annuler-annulation').click (e) ->
+    e.preventDefault()
+    $annulation.hide()
+    
   $('.btn.sub-changer').click ->
     # $('.panel-credit-card .credit-card-info').toggle('slow')
     # $('.credit-card-form').toggle('slow')
@@ -28,7 +35,7 @@ jQuery ->
     
   $('.btn.sub-detruire').click ->
     $('.credit-card-info').children('.alert').remove()
-    $('.credit-card-info').prepend('<div class="alert alert-warning">Suppression de carte de crédit à venir! Pour l\'instant, contacter votre administrateur.')
+    $('.credit-card-info').prepend('<div class="alert alert-warning">La suppression de votre carte de crédit entrainera l\'annulation de votre abonnement. Si c\'est ce que vous désirez, <b>annuler l\'abonnement directement</b>.</div>')
     
     
   $('.btn.annuler-change-cc').click ->
