@@ -53,7 +53,13 @@ ActiveAdmin.setup do |config|
     ns.logout_link_path = :destroy_user_session_path
     ns.allow_comments = true
     ns.authorization_adapter = ActiveAdmin::CanCanAdapter
-    
+    ns.build_menu do |menu|
+
+      menu.add :label => "Compte" do |sites|
+        sites.add :label => "Abonnement", :url => '/abonnement/actif'
+        sites.add :label => "Profil", :url => '/users/edit'
+      end
+    end
   end
   
     # == User Authentication

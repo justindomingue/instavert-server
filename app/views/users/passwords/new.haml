@@ -1,0 +1,10 @@
+.border-form-div
+  %h2 Mot de passe oublié?
+  = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
+    = devise_error_messages!
+    
+    .form-group
+      %span.help-block Entrez votre courriel et nous vous enverrons les instructions de récupération de votre mot de passe.
+      = f.email_field :email, :placeholder => 'Adresse couriel', class:'form-control', autofocus:true
+      = f.submit "Envoyez-moi les instructions de récupération",:class=>'btn btn-success'
+  = render "users/shared/links"
