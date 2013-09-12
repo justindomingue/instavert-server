@@ -35,7 +35,7 @@ jQuery ->
     
   $('.btn.sub-detruire').click ->
     $('.credit-card-info').children('.alert').remove()
-    $('.credit-card-info').prepend('<div class="alert alert-warning">La suppression de votre carte de crédit entrainera l\'annulation de votre abonnement. Si c\'est ce que vous désirez, <b>annuler l\'abonnement directement</b>.</div>')
+    $('.credit-card-info').prepend('<div class="alert alert-warning">La suppression de votre carte de crédit entrainera l\'annulation de votre abonnement. Si c\'est ce que vous désirez, <b>annuler l\'abonnement directement</b> (votre carte de crédit sera détruite du même coup).</div>')
     
     
   $('.btn.annuler-change-cc').click ->
