@@ -17,4 +17,5 @@ class AdminMailer < ActionMailer::Base
   def webhooks(event)
     @event = event
     mail(to:'domingue.justin@gmail.com', subject:'Webhooks')
+  end
 end
