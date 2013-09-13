@@ -8,17 +8,6 @@ ActiveAdmin.register_page "Dashboard" do
   content do
     columns do
       column do
-        panel "Recherches récentes" do
-          table_for Search.order("created_at desc").limit(5) do |r|
-            r.column "Nom", :name do |product|
-              link_to product.name, superuser_matiere_path(product)
-            end
-          end
-          strong { link_to "Voir toutes les Recherches", superuser_recherches_path }
-        end
-      end
-      
-      column do
         panel "Produits récents" do
           table_for Product.order("created_at desc").limit(5) do |p|
             p.column "Nom", :name do |product|
