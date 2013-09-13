@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+  %body
+    %h1 New Webhook Event
+    
+    %h3= @event["type"]
+    - @event["data"].each_pair do |key, value|
+    %p key : value
