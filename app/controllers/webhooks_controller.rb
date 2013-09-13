@@ -1,5 +1,7 @@
 class WebhooksController < ApplicationController  
   def stripe
+    Stripe.api_key = ENV['STRIPE_SECRET_KEY']
+    
     data = JSON.parse(request.body.read)
     puts data
     puts data["id"]
