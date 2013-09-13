@@ -18,6 +18,8 @@ Mobile::Application.routes.draw do
   
   # Statics pages
   get '/home',           :to => 'pages#home'
+  
+  post '/stripe-webhooks', :to => 'webhooks#stripe'
  
   # The priority is based upon order of creation:
   # first created -> highest priority.
