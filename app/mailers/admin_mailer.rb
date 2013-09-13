@@ -13,4 +13,8 @@ class AdminMailer < ActionMailer::Base
     @message = message
     mail(to:'justin.domingue@instavert.com', subject:"Instavert: Erreur d'abonnement")
   end
+  
+  def webhooks(event)
+    @event = event
+    mail(to:'domingue.justin@gmail.com', subject:'Webhooks')
 end
