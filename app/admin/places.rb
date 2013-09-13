@@ -10,8 +10,6 @@ ActiveAdmin.register Place do
     column "Description", :description
     column :content
     column :tags
-    column "Vignette (URL)", :thumb
-    column "Vues", :views
     default_actions
   end
   
@@ -32,6 +30,12 @@ end
 
 ActiveAdmin.register Place, namespace: :admin, :as => "Recuperateur" do  
   config.sort_order = "name_asc"
+  batch_action :destroy, :confirm => "Êtes-vous certain de vouloir supprimer tous les éléments sélectionnés?" do |selection|
+    Product.find(selection).each do |p|
+      p.destroy
+    end
+  end
+  
   
   controller do
     def create
@@ -41,6 +45,7 @@ ActiveAdmin.register Place, namespace: :admin, :as => "Recuperateur" do
   end
   
   index do
+    selectable_column
     column "Nom", :name do |p| link_to p.name, admin_recuperateur_path(p) end
     column "Matières" do 
       |p| p.products.map { |p| link_to p.name, admin_matiere_path(p) }.join('<br/>').html_safe
@@ -75,8 +80,6 @@ ActiveAdmin.register Place, namespace: :admin, :as => "Recuperateur" do
   form do |f|
     f.inputs "Détails" do
       f.input :name, :label => "Nom"
-      # f.input :description, :label => "Descrition"
-      # f.input :thumb, :label => "Vignette (URL)"
       f.input :tags
       f.input :description
       f.input :responsable

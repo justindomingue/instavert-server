@@ -26,6 +26,11 @@ end
 
 ActiveAdmin.register Product, :as => "Matiere", namespace: :admin do
   config.sort_order = "name_asc"
+  batch_action :destroy, :confirm => "Êtes-vous certain de vouloir supprimer tous les éléments sélectionnés?" do |selection|
+    Product.find(selection).each do |p|
+      p.destroy
+    end
+  end
   
   controller do
     def create
@@ -35,6 +40,7 @@ ActiveAdmin.register Product, :as => "Matiere", namespace: :admin do
   end
   
   index do
+    selectable_column
     column "Nom", :name, :sortable => :name do |p| link_to p.name, admin_matiere_path(p)
     end
     column "Lieux" do |p|

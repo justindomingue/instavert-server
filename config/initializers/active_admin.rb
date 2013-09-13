@@ -62,6 +62,8 @@ ActiveAdmin.setup do |config|
     end
   end
   
+  config.batch_actions = true
+  
     # == User Authentication
   #
   # Active Admin will automatically call an authentication

@@ -220,4 +220,6 @@ Devise.setup do |config|
   #   manager.intercept_401 = false
   #   manager.default_strategies(:scope => :user).unshift :some_external_strategy
   # end
+  
+   config.secret_key = '9e61227d7b5dda2aab28039bab6f90b4492203b7c87b048588845c5c7e8463718b8ddf376bb940f82642b67732cdddb0516b9ef9168dc4bcaf05ecad79680958'
 end
