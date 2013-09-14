@@ -21,6 +21,7 @@
       %p
         %b Valeur :
         15$/mois
+        %small (prix de l'abonnement sans coupon rabais)
       %p
         %b Statut :
         = render partial:'status', locals: { status:@customer["subscription"]["status"]}

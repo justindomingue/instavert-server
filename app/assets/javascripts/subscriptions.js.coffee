@@ -99,7 +99,6 @@ jQuery ->
       
       # Also insert the coupon
       $form.append $("<input type=\"hidden\" name=\"coupon\" />").val(sessionStorage.coupon)
-      sessionStorage.coupon = ""
       
       # and submit
       $form.get(0).submit()

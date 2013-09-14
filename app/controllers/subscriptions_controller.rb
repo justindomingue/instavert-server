@@ -13,7 +13,6 @@ class SubscriptionsController < ApplicationController
   def active
     @user = current_user
     @customer = Stripe::Customer.retrieve(@user.stripe_id)
-    # @user["trial_end_date"] = (@customer["subscription"]["trial_end"]).to_s(:long)
   end
   
   def create
