@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   def subscribed?
     unless current_admin_user
       if !current_user.subscribed
-        redirect_to new_subscription_path, alert:"Vous devez être abonné pour accéder à cette page."
+        redirect_to new_subscription_path, alert:"Vous devez être abonné pour accéder au tableau de bord."
       end
     end
   end

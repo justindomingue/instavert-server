@@ -73,3 +73,6 @@ body {
 
 .payment-errors { color: red; }
 .btn.annuler-annulation { margin-top: 10px; }
+
+.pricing h4 { text-decoration: line-through; color: red;}
+.justify { text-align: justify;}
