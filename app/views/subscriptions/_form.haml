@@ -14,9 +14,9 @@
     = label_tag :expiration, "Expiration (MM/YYYY)"
     = select_month nil, { add_month_numbers_true: true}, { name:nil, "data-stripe"=>"exp-month"}
     = select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, "data-stripe"=>"exp-year"}
-  
-  - if params[:action] == 'new'
-    = submit_tag 'Enregistrer', class:'btn btn-lg btn-primary', "data-loading-text"=>"En traitement..."
-  - elsif params[:action] == 'active'
-    = submit_tag 'Enregistrer', class:'btn btn btn-info', "data-loading-text"=>"En traitement..."
-    %button.btn.btn-default.annuler-change-cc Annuler
+    
+    %br/
+    %br/
+    = text_field_tag 'coupon', nil, placeholder:'Coupon rabais', class:'form-control cc-coupon'
+    
+  = submit_tag 'Enregistrer', class:'btn btn-lg btn-primary', "data-loading-text"=>"En traitement..."

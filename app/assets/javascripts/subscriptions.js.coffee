@@ -42,6 +42,7 @@ jQuery ->
     $('.panel-credit-card .credit-card-info').toggle('slow')
     $('.credit-card-form').toggle('slow')
   
+  
   # ======== STRIPE =========
   Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content'))
   
@@ -71,7 +72,10 @@ jQuery ->
     else
       $form.find('.btn').button('loading')
       $("#payment-form input, #payment-form select").attr("disabled", true);
-    
+      
+      # Save coupon in session
+      sessionStorage.coupon = $('.cc-coupon').val()
+      
       Stripe.createToken($form, stripeResponseHandler)
     
     return false
@@ -92,6 +96,10 @@ jQuery ->
     
       # Insert the token into the form so it gets submitted to the server
       $form.append $("<input type=\"hidden\" name=\"stripeToken\" />").val(token)
-    
+      
+      # Also insert the coupon
+      $form.append $("<input type=\"hidden\" name=\"coupon\" />").val(sessionStorage.coupon)
+      sessionStorage.coupon = ""
+      
       # and submit
       $form.get(0).submit()

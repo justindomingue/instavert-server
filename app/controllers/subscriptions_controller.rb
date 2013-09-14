@@ -19,19 +19,21 @@ class SubscriptionsController < ApplicationController
   def create
     # Get the credit card details submitted by the form
     token = params[:stripeToken]
-  
+    coupon = params[:coupon]
+      
     # Create a Customer
     customer = Stripe::Customer.create(
       :card => token,
       :plan => "basic",
-      :email => current_user.email
+      :email => current_user.email,
+      :coupon => coupon
     )
-  
+      
     current_user.stripe_id = customer.id
     current_user.last_4 = customer['cards']['data'][0]['last4']
     current_user.card_type = customer['cards']['data'][0]['type']
     current_user.subscribed = true
-  
+      
     if current_user.save
       redirect_to active_subscription_path, notice:'Abonnement réussi. Vous carte sera automatiquement chargée à la fin de la période d\'essai de sept (7) jours).'
     else
