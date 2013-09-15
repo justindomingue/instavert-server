@@ -33,10 +33,6 @@ ActiveAdmin.register_page "Dashboard" do
             column "Nom", :name do |s|
               link_to s.name, superuser_ecole_path(s)
             end
-            column "Utilisteurs", :user_id do |id|
-              u = User.find_by_school_id(id)
-              link_to u.contact_name, superuser_user_path(u)
-            end
           end
           strong { link_to "Voir toutes les Établissements", superuser_ecoles_path }
         end

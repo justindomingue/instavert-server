@@ -34,7 +34,7 @@ ActiveAdmin.register Product, :as => "Matiere", namespace: :admin do
   
   controller do
     def create
-      params[:matiere][:school_d] = current_user.school.id
+      params[:matiere][:school_id] = current_user.school.id
       create!
     end
   end
