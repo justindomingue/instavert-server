@@ -1,4 +1,13 @@
 fr:
+  formtastic:
+    yes: 'Oui'
+    no: 'Non'
+    create: 'Créer'
+    update: 'Modifier'
+    submit: 'Envoyer'
+    cancel: 'Annuler'
+    reset: 'Réinitialiser'
+    required: 'requis'
   active_admin:
     dashboard: "Tableau de Bord"
     dashboard_welcome:
@@ -14,6 +23,7 @@ fr:
     update_model: "Modifier"
     delete_model: "Supprimer"
     details: "Détails"
+    update: 'Modifier'
     cancel: "Annuler"
     empty: "Vide"
     previous: "Précédent"
