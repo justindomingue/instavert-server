@@ -70,10 +70,7 @@ ActiveAdmin.register Product, :as => "Matiere", namespace: :admin do
       f.input :category,label:'Catégorie', as: :radio, collection:['Contenant', 'Électronique', 'Lumière', 'Maison', 'Matériaux de construction', 'Matériel de bureau', 'Nourriture', 'Papier', 'Santé', 'Vêtement', 'Autre']
       f.input :places, as: :check_boxes, collection: current_user.school.places, label:"Récupérateurs"
     end
-    f.actions do
-      f.action :submit
-      f.action :cancel
-    end
+    f.actions
   end
   
   sidebar "Explication des champs", :except => :index do

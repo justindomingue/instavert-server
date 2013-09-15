@@ -7,6 +7,7 @@ gem 'jquery-rails', "2.3.0"
 gem 'mime-types', '1.17.2'
 
 gem "activeadmin"
+gem "formtastic", git:"https://github.com/justinfrench/formtastic"
 gem 'cancan'
 
 gem "rails-i18n"
