@@ -32,9 +32,10 @@
         %p
           %b Fin de la période courante :
           = I18n.l Time.at(@customer["subscription"]["current_period_end"])
-        %p
-          %b Fin de la période d'essai :
-          = I18n.l Time.at(@customer["subscription"]["trial_end"])
+        - unless @customer["subscription"]["trial_end"].nil?
+          %p
+            %b Fin de la période d'essai :
+            = I18n.l Time.at(@customer["subscription"]["trial_end"])
       .btn-group.float-right
         %button.btn.btn-sm.btn-primary.sub-plusinfo Plus
         %button.btn.btn-sm.btn-danger.sub-annuler Annuler

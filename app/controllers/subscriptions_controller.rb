@@ -18,15 +18,22 @@ class SubscriptionsController < ApplicationController
   def create
     # Get the credit card details submitted by the form
     token = params[:stripeToken]
-    coupon = params[:coupon]
+    
+    if params[:coupon].nil? || params[:coupon] == ''
+      customer = Stripe::Customer.create(
+        :card => token,
+        :plan => "basic",
+        :email => current_user.email      
+      )
+    else
+      customer = Stripe::Customer.create(
+        :card => token,
+        :plan => "basic",
+        :email => current_user.email,
+        :coupon => params[:coupon]
+      )
       
-    # Create a Customer
-    customer = Stripe::Customer.create(
-      :card => token,
-      :plan => "basic",
-      :email => current_user.email,
-      :coupon => coupon
-    )
+    end 
       
     current_user.stripe_id = customer.id
     current_user.last_4 = customer['cards']['data'][0]['last4']
