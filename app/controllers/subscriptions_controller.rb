@@ -6,6 +6,8 @@ class SubscriptionsController < ApplicationController
   before_filter :authenticate_user!
   before_filter :subscribed?, only:['active', 'cancel']
   
+  force_ssl
+  
   def new
     @user = current_user
   end
@@ -19,20 +21,19 @@ class SubscriptionsController < ApplicationController
     # Get the credit card details submitted by the form
     token = params[:stripeToken]
     
-    if params[:coupon].nil? || params[:coupon] == ''
+    if !params[:coupon].nil? || !params[:coupon] == ''
       customer = Stripe::Customer.create(
         :card => token,
         :plan => "basic",
-        :email => current_user.email      
+        :email => current_user.email,
+        :coupon => params[:coupon]      
       )
     else
       customer = Stripe::Customer.create(
         :card => token,
         :plan => "basic",
-        :email => current_user.email,
-        :coupon => params[:coupon]
+        :email => current_user.email
       )
-      
     end 
       
     current_user.stripe_id = customer.id
